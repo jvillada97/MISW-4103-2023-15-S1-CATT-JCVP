@@ -1,0 +1,16 @@
+{
+    "EMAIL": "c.tiguaque@uniandes.edu.co",
+    "PASSWORD": "Uniandes123",
+    "POST": "Post de ejemplo X",
+    "POST2": "Post de ejemplo 2X",
+    "TEXT-POST": "Este post se crea automáticamente desde kraken.",
+    "TEXT-POST2": "Nuevo Titulo de Post",
+    "PAGE": "Pagina de ejemplo X",
+    "PAGE2": "Pagina de ejemplo 2X",
+    "TEXT-PAGE": "Esta pagina se crea automáticamente desde kraken.",
+    "TEXT-PAGE2": "Nuevo titulo de pagina",
+    "TAG": "Tag de ejemplo X",
+    "TAG2": "Tag de ejemplo X",
+    "TEXT-TAG": "Este tag se crea automáticamente desde kraken.",
+    "TEXT-TAG2": "Nuevo tag"
+}
