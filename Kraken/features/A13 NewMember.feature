@@ -1,7 +1,7 @@
-Feature: My feature
+Feature: In this feature we want to test the functionality of creating a new member
 
 @user1 @web
-Scenario: Edit name blog
+Scenario: New member
   Given I navigate to page "http://localhost:2368/ghost/"
   When I enter my email "<EMAIL>"
   And I enter my password "<PASSWORD>"

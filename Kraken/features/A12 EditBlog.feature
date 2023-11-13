@@ -1,4 +1,4 @@
-Feature: My feature
+Feature: In this feature you want to test the functionality of modifying the name of the blog
 
 @user1 @web
 Scenario: Edit name blog

@@ -1,4 +1,4 @@
-Feature: 3
+Feature: In this feature we want to test the functionality of deleting a member
 
 @user1 @web
 Scenario: Delete Member

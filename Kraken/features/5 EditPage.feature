@@ -1,4 +1,4 @@
-Feature: 2
+Feature: In this feature you want to test the functionality of editing a page
 
 @user1 @web
 Scenario: Edit Page

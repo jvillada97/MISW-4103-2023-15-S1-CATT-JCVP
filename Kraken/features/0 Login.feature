@@ -1,4 +1,4 @@
-Feature: My feature
+Feature: In this feature we want to test the login functionality
 
 @user1 @web
 Scenario: New Post

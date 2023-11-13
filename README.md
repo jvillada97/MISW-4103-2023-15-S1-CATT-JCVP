@@ -21,7 +21,7 @@ Sigue estos pasos para configurar el entorno de prueba:
 
 1. Descarga este repositorio en tu sistema.
 
-2. Abre una terminal y navega al directorio del proyecto.
+2. Abre una terminal y navega al directorio del proyecto y ubicate en la carpeta "Kraken".
 
 3. Ejecuta el siguiente comando para instalar las kraken-node:
 

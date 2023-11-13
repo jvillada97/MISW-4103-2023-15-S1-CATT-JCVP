@@ -1,4 +1,4 @@
-Feature: My feature
+Feature: In this feature you want to test the functionality of creating a new page
 
 @user1 @web
 Scenario: New Page

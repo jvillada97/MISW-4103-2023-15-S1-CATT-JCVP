@@ -1,7 +1,7 @@
-Feature: My feature
+Feature: In this feature you want to test the functionality of unpublishing a post
 
 @user1 @web
-Scenario: New Post
+Scenario: Unpublish post
   Given I navigate to page "http://localhost:2368/ghost/"
   When I enter my email "<EMAIL>"
   And I enter my password "<PASSWORD>"

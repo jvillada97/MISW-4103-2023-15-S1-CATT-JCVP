@@ -1,4 +1,4 @@
-Feature: 3
+Feature: In this feature you want to test the functionality of deleting a post
 
 @user1 @web
 Scenario: Delete Post
