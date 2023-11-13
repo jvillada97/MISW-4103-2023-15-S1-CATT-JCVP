@@ -48,7 +48,7 @@ Sigue estos pasos para configurar el entorno de prueba:
    npm install -g appium
 
 
-7.  Asegurate de ingresar los datos "EMAIL" y "PASSWORD" correspondientes al usuario administrador de GHOST en el archivo "Kraken/properties.json".
+7.  Asegurate de ingresar los datos "EMAIL" y "PASSWORD" correspondientes al usuario administrador de GHOST en el archivo "Kraken/properties.json". 
 
 8.  Si deseas modificar los datos de ejemplo puedes modificarlos en el archivo  "Kraken/properties.json", sin embargo, esto no es necesario para ejecutar las pruebas.
 
