@@ -4,7 +4,7 @@ Carlos Andrés Tiguaque Tocora - c.tiguaque@uniandes.edu.co
 
 # Pruebas automatizadas con Kraken
 
-Este proyecto de prueba utiliza Kraken para realizar ejecuciones de 15 escenarios. Las pruebas simulan la navegación y la interacción del usuario con elementos en la página web "http://localhost:2368/ghost/".
+Este proyecto de prueba utiliza Kraken para realizar ejecuciones de 12 escenarios. Las pruebas simulan la navegación y la interacción del usuario con elementos en la página web "http://localhost:2368/ghost/".
 
 ## Requisitos
 
@@ -28,19 +28,15 @@ Sigue estos pasos para configurar el entorno de prueba:
    ```bash
    npm install kraken-node
 
-
-
 4. Ejecuta el siguiente comando para instalar las dependencias del proyecto:
 
    ```bash
    npm install
 
-
 5. Instala la biblioteca chai ejecutando el siguiente comando:
 
    ```bash
    npm install chai
-
 
 6.  Instala la biblioteca appium ejecutando el siguiente comando:
 
@@ -89,7 +85,50 @@ Elementos properties.json:
     "TAG": Nombre del nuevo tag a crear, escenario de crear tag
     "TEXT-TAG":  Texto a ingresar en el tag, escenario de crear tag
     "TEXT-TAG2":  Nuevo nombre del tag, escenario editar tag
+    "NAME-BLOG": Nuevo nombre del blog, escenario modificar nombre del blog
     "NAME-BLOG": Nuevo nombre del blog, escenario modificar nombre del blog,
-   "NAME-MEMBER": Nombre del nuevo miembro
+    "NAME-MEMBER": Nombre del nuevo miembro
     "EMAIL-MEMBER": correo del nuevo miembro
     "TEXT-MEMBER": Notas del nuevo miembro
+# Pruebas automatizadas con Playwright
+
+## Requisitos
+
+Asegúrate de tener instaladas las siguientes herramientas:
+
+- [Ghost](https://github.com/TryGhost/Ghost) v5.68.0
+- [Node.js](https://nodejs.org/) >= v18.17.0
+- [NPM](https://www.npmjs.com/) >= v10.2.0
+
+
+## Instalación
+Sigue estos pasos para configurar el entorno de prueba:
+
+1. Descarga este repositorio en tu sistema.
+
+2. Abre una terminal y navega al directorio del proyecto, adicional hay que ingresar a la carpeta playwright_ts. Dado que es la raiz del proyecto.
+
+3. Ejecuta el siguiente comando para instalar Playwright: npm install playwright
+
+4. En el mismo folder ejecutar el siguiente comando para descargar faker: npm install @faker-js/faker
+
+## Ejecución de pruebas
+
+Para ejecutar las pruebas, sigue estos pasos:
+
+1. Asegurate que esta corriendo correctamente el aplicativo GHOST localmente en el puerto 2368.
+
+2. Abre una terminal en el directorio "playwright_ts" del proyecto.
+
+3. Borrar todos los posts, tags y pages de ghost.
+
+4. Ejecuta el comando: npx playwright test. Este comando ejecutara todas los tests que se encuentran en los archivos dentro del folder "test" en la raiz principal del proyecto. 
+
+## Observaciones
+
+Es importante que en caso de que ghost no reconozca el usuario, se debe cambiar por un email valido creado anteriormente en ghost en la sentencia: await page.locator('[id="identification"]').fill('CORREO_VALIDO_AQUI');
+y tambien la correspondiente contraseña en la siguiente sentencia: await page.locator('[id="password"]').fill('PASSWORD_AQUI');. Se recomienda hacer este cambio con la ayuda del editor de codigo VS code en todos los archivos dentro del folder "test"
+
+Tambien es importante que antes de iniciar la ejecución se deben borrar todos los posts, pages y tags en ghost.
+
+    
