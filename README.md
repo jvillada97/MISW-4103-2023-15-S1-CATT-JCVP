@@ -21,7 +21,7 @@ Sigue estos pasos para configurar el entorno de prueba:
 
 1. Descarga este repositorio en tu sistema.
 
-2. Abre una terminal y navega al directorio del proyecto.
+2. Abre una terminal y navega al directorio del proyecto y ubicate en la carpeta "Kraken".
 
 3. Ejecuta el siguiente comando para instalar las kraken-node:
 
@@ -43,26 +43,27 @@ Sigue estos pasos para configurar el entorno de prueba:
    ```bash
    npm install -g appium
 
-7. Asegurate de ingresar los datos "EMAIL" y "PASSWORD" correspondientes al usuario administrador de GHOST en el archivo "Kraken/properties.json".
 
-8. Si deseas modificar los datos de ejemplo puedes modificarlos en el archivo  "Kraken/properties.json", sin embargo, esto no es necesario para ejecutar las pruebas.
+7.  Asegurate de ingresar los datos "EMAIL" y "PASSWORD" correspondientes al usuario administrador de GHOST en el archivo "Kraken/properties.json". 
+
+8.  Si deseas modificar los datos de ejemplo puedes modificarlos en el archivo  "Kraken/properties.json", sin embargo, esto no es necesario para ejecutar las pruebas.
 
 ## Ejecución de pruebas
 
 Para ejecutar las pruebas, sigue estos pasos:
 
-1. Asegurate que esta corriendo correctamente el aplicativo GHOST localmente en el puerto 2368.
+1.  Asegurate que esta corriendo correctamente el aplicativo GHOST localmente en el puerto 2368.
 
-2. Abre una terminal en el directorio "Kraken" del proyecto.
+2.  Abre una terminal en el directorio "Kraken" del proyecto.
 
-3. Lanza las pruebas con el siguiente comando:
+3.  Lanza las pruebas con el siguiente comando:
 
    ```bash
     ./node_modules/kraken-node/bin/kraken-node run
 
-3. Se abrirá el navegador y comenzarán a ejecutarse las pruebas. No realices ninguna acción en la máquina mientras las pruebas estén en ejecución, ya que esto podría detener la ejecución y producir resultados incompletos.
+4.  Se abrirá el navegador y comenzarán a ejecutarse las pruebas. No realices ninguna acción en la máquina mientras las pruebas estén en ejecución, ya que esto podría detener la ejecución y producir resultados incompletos.
 
-4. Al finalizar la ejecución, podrás ver los resultados en la terminal, también encontraras evidencia de las ejecuciones en la carpeta "Kraken/reports" .
+5.  Al finalizar la ejecución, podrás ver los resultados en la terminal, también encontraras evidencia de las ejecuciones en la carpeta "Kraken/reports" .
 
 ## Observaciones
 Se creó un archivo .feature por cada escenario con el fin de que la ejecución se realice de forma secuencial, un escenario posterior al otro. 
@@ -85,7 +86,10 @@ Elementos properties.json:
     "TEXT-TAG":  Texto a ingresar en el tag, escenario de crear tag
     "TEXT-TAG2":  Nuevo nombre del tag, escenario editar tag
     "NAME-BLOG": Nuevo nombre del blog, escenario modificar nombre del blog
-   
+    "NAME-BLOG": Nuevo nombre del blog, escenario modificar nombre del blog,
+    "NAME-MEMBER": Nombre del nuevo miembro
+    "EMAIL-MEMBER": correo del nuevo miembro
+    "TEXT-MEMBER": Notas del nuevo miembro
 # Pruebas automatizadas con Playwright
 
 ## Requisitos
@@ -127,3 +131,4 @@ y tambien la correspondiente contraseña en la siguiente sentencia: await page.l
 
 Tambien es importante que antes de iniciar la ejecución se deben borrar todos los posts, pages y tags en ghost.
 
+    
