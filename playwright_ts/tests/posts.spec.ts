@@ -13,7 +13,7 @@ test('check login', async ({ page }) => {
     await page.locator('[data-test-button="sign-in"]').click();
     
     // Expect the url "to contain" a substring.
-    await expect(page).toHaveURL(/.*dashboard/);
+    await expect(page.getByText('Welcome to your Dashboard')).toBeVisible();
     console.log("----------Login successful----------");
     await page.screenshot({path: './screenshots/post/login.png'})
 });

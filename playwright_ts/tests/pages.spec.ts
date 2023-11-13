@@ -8,7 +8,7 @@ test('create page and verify successful creation', async ({ page }) => {
     await page.locator('[id="identification"]').fill('j.villadap@uniandes.edu.co');
     await page.locator('[id="password"]').fill('-9Js9QVhy:V_nmT');
     await page.locator('[data-test-button="sign-in"]').click();
-    //Create post
+    //Create page
     await page.goto(`${url}pages`);   
     await page.goto(`${url}editor/page`)
     const fakeTitle : string = faker.lorem.word();
