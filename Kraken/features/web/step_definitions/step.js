@@ -4,11 +4,15 @@ const LoginPage = require('../../loginPage');
 const PostPage = require('../../postPage')
 const PagePage = require('../../pagePage')
 const TagPage = require('../../tagPage')
+const BlogPage = require('../../blogPage')
+const MemberPage = require('../../memberPage')
 
 let loginPage;
 let postPage;
 let pagePage;
 let tagPage;
+let blogPage;
+let memberPage;
 
 // EVENTOS DE LOGIN
 
@@ -30,13 +34,13 @@ When('I click enter', async function () {
 
 });
 
-Then ('I validate login fail', async function () {
+Then('I validate login fail', async function () {
     loginPage = new LoginPage(this.driver);
     expect(await loginPage.validateLogin(), 'Error, no debía permitir loguear', false);
 });
 
 
-Then ('I validate login successful', async function () {
+Then('I validate login successful', async function () {
     loginPage = new LoginPage(this.driver);
     expect(await loginPage.validateLogin(), 'Error, debía permitir loguear', true);
 });
@@ -315,4 +319,92 @@ When('I delete tag', async function () {
 When('I confirm delete the tag', async function () {
     tagPage = new TagPage(this.driver);
     await tagPage.confirmDeleteTagButton();
+});
+
+// EVENTOS CONFIGURAR BLOG
+
+When('I click config', async function () {
+    blogPage = new BlogPage(this.driver);
+    await blogPage.configBlogButton();
+});
+
+When('I click general', async function () {
+    blogPage = new BlogPage(this.driver);
+    await blogPage.generalBlogButton();
+});
+
+When('I click expand', async function () {
+    blogPage = new BlogPage(this.driver);
+    await blogPage.expandBlogButton();
+});
+
+When('I enter title blog {kraken-string}', async function (title) {
+    blogPage = new BlogPage(this.driver);
+    await blogPage.titleInput(title);
+});
+
+When('I click save', async function () {
+    blogPage = new BlogPage(this.driver);
+    await blogPage.saveTitle();
+});
+
+Then('I validate new title {kraken-string}', async function (title) {
+    blogPage = new BlogPage(this.driver);
+    expect(await blogPage.validateNewTitle(title), 'Error, nombre no actualizado', true);
+});
+
+// EVENTOS MEMBER
+
+When('I click members', async function () {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.memberButton();
+});
+
+When('I click new member', async function () {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.newMemberButton();
+});
+
+When('I enter name member {kraken-string}', async function (name) {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.nameInput(name);
+
+});
+
+When('I enter email member {kraken-string}', async function (name) {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.emailInput(name);
+
+});
+
+When('I enter text member {kraken-string}', async function (name) {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.textInput(name);
+
+});
+
+When('I click save member', async function () {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.saveMember();
+});
+
+Then('I validate that the member {kraken-string} exists and select it', async function (name) {
+    memberPage = new MemberPage(this.driver);
+    expect(await memberPage.checkIfMemberExists(name), 'El miembro no existe').to.not.equal(false);
+});
+
+// EVENTOS MIEMBRO ELIMINAR
+When('I delete member', async function () {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.deleteMember();
+});
+
+When('I confirm delete the member', async function () {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.confirmDeleteMemberButton();
+});
+
+When('I validate that the member {kraken-string} not exists', async function (title) {
+    memberPage = new MemberPage(this.driver);
+    expect(await memberPage.checkIfMemberNotExists(title), 'El miembro ya existe').to.not.equal(false);
 });

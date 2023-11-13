@@ -35,12 +35,9 @@ class TagPage {
     async checkIfTagNotExists(tituloTag) {
         const tagSelector = `//h3[contains(string(),"${tituloTag}")]`;
         const tagElements = await this.driver.$$(tagSelector);
-        console.log("CAAAAAAATTTTTTTTTTTTTT")
-        if (tagElements.length == 0){
-            console.log(tagElements.length)
+        if (tagElements.length == 0) {
             return true;
-        } else{
-            console.log(tagElements.length)
+        } else {
             return false;
         }
     }
@@ -64,7 +61,7 @@ class TagPage {
         let element = await this.driver.$('.gh-btn-primary');
         return await element.click();
     }
-    
+
     async returnTagButton() {
         let element = await this.driver.$('#ember25');
         return await element.click();
