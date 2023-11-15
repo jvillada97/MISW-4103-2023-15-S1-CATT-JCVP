@@ -1,96 +1,74 @@
 import { test, expect, Page } from '@playwright/test';
 import { faker, ur } from '@faker-js/faker';
 
-test('create page and verify successful creation', async ({ page }) => {
-    const url: string = 'http://localhost:2368/ghost/#/';
-    await page.goto(url);
+test.describe.serial("Pages E2E Scenarios", () => {
+    test.beforeEach(async ({ page }) =>{
+        const user: string = 'j.villadap@uniandes.edu.co';
+        const password: string =  '-9Js9QVhy:V_nmT';
+        await page.goto('http://localhost:2368/ghost/#/');
 
-    await page.locator('[id="identification"]').fill('j.villadap@uniandes.edu.co');
-    await page.locator('[id="password"]').fill('-9Js9QVhy:V_nmT');
-    await page.locator('[data-test-button="sign-in"]').click();
-    //Create page
-    await page.goto(`${url}pages`);   
-    await page.goto(`${url}editor/page`)
-    const fakeTitle : string = faker.lorem.word();
-    await page.locator('[placeholder="Page title"]').fill(fakeTitle);
-    await page.locator('[data-koenig-dnd-droppable="true"]').fill(fakeTitle);
-    await page.locator('[data-test-button="publish-flow"]').click();
-    await page.locator('[data-test-button="continue"]').click();
-    await new Promise(r => setTimeout(r, 1000));
-    await page.locator('[data-test-button="confirm-publish"]').dispatchEvent('click');
-    await new Promise(r => setTimeout(r, 1000));
-    await page.screenshot({path: `./screenshots/page/page${fakeTitle}-created.png`})
-    await expect(page.locator('[class="gh-post-bookmark-title"]')).toBeVisible();
-    console.log(`----------page ${fakeTitle} created successfully----------`);
+        await page.locator('[id="identification"]').fill(user);
+        await page.locator('[id="password"]').fill(password);
+        await page.locator('[data-test-button="sign-in"]').click();
+        
+        // Expect the url "to contain" a substring.
+        await expect(page.getByText('Welcome to your Dashboard')).toBeVisible();
+        console.log("----------Login successful----------");
+        await page.screenshot({path: './screenshots/page/login.png'})
+    })
 
-})
+    test('creates page and verify successful creation', async ({ page }) => {
+        const url: string = 'http://localhost:2368/ghost/#/';
+        //Create page
+        await page.goto(`${url}pages`);
+        await page.goto(`${url}editor/page`);
+        const fakePage = faker.lorem.word();
+        await page.getByPlaceholder('Page title').fill(fakePage);
+        await page.locator('p[data-koenig-dnd-droppable="true"]').fill(fakePage);
+        await page.getByRole('button', { name: 'Publish', exact: true }).click();
+        await page.getByRole('button', { name: 'Continue, final review →', exact: true }).click();
+        await new Promise(r => setTimeout(r, 1000));
+        await page.locator('[data-test-button="confirm-publish"]').dispatchEvent('click');
+        await new Promise(r => setTimeout(r, 1000));
+        await expect(page.getByText(fakePage).first()).toBeVisible();
+        await page.screenshot({path: `./screenshots/page/page${fakePage}-created.png`})        
+        console.log(`----------page ${fakePage} created successfully----------`);
+        
+    })
 
-test('create page, edit and verify successful edition', async ({ page }) => {
-    const url: string = 'http://localhost:2368/ghost/#/';
-    await page.goto(url);
+    test('edits page recently created', async( { page }) => {
+        const url: string = 'http://localhost:2368/ghost/#/';
+        
+        await page.goto(`${url}pages`);
+        await page.locator('h3.gh-content-entry-title').first().click();
+        await new Promise(r => setTimeout(r, 2000));
+        const initialFakeTitle : string = faker.lorem.word();
+        await page.getByPlaceholder('Page title').fill(initialFakeTitle);
+        await new Promise(r => setTimeout(r, 2000));
+        await page.getByText('Update').first().click();
+        await page.goto(`${url}pages`);
+        expect(page.getByText(initialFakeTitle)).toBeVisible();
+        await new Promise(r => setTimeout(r, 1000));
+        await page.screenshot({path: `./screenshots/page/page${initialFakeTitle}-edited.png`})        
+        console.log(`----------page ${initialFakeTitle} edited successfully----------`);
+        
+    })
 
-    await page.locator('[id="identification"]').fill('j.villadap@uniandes.edu.co');
-    await page.locator('[id="password"]').fill('-9Js9QVhy:V_nmT');
-    await page.locator('[data-test-button="sign-in"]').click();
-    //Create post
-    await page.goto(`${url}pages`);   
-    await page.goto(`${url}editor/page`)
-    const initialFakeTitle : string = faker.lorem.word();
-    await page.locator('[placeholder="Page title"]').fill(initialFakeTitle);
-    await page.locator('[data-koenig-dnd-droppable="true"]').fill(initialFakeTitle);
-    await page.locator('[data-test-button="publish-flow"]').click();
-    await page.locator('[data-test-button="continue"]').click();
-    await new Promise(r => setTimeout(r, 1000));
-    await page.locator('[data-test-button="confirm-publish"]').dispatchEvent('click');
-    await new Promise(r => setTimeout(r, 1000));
-    await page.goto(`${url}pages`);   
-    await new Promise(r => setTimeout(r, 1000));
-    const postName = await page.locator('[class="gh-content-entry-title"]').first().innerText();
-    await page.getByText(postName).click();
-    await new Promise(r => setTimeout(r, 1000));
-    
-    const fakeTitle : string = faker.lorem.word();
-    await page.locator('[placeholder="Page title"]').fill(fakeTitle);
-    await page.locator('[data-koenig-dnd-droppable="true"]').fill(fakeTitle);
-    await page.locator('[data-test-button="publish-save"]').click();
-    await page.goto(`${url}pages`);
-    await expect(page.getByText(fakeTitle)).toBeVisible();
-    await new Promise(r => setTimeout(r, 1000));
-    await page.screenshot({path: `./screenshots/page/page${fakeTitle}-edited.png`})
-    console.log(`----------page ${fakeTitle} edited successfully----------`);
+    test('deletes page recently edited', async( { page }) => {
+        const url: string = 'http://localhost:2368/ghost/#/';
+        
+        await page.goto(`${url}pages`);
+        await page.locator('h3.gh-content-entry-title').first().click();
+        await new Promise(r => setTimeout(r, 2000));
+        await page.getByTitle('Settings').click();
+        await page.getByRole('button', { name: 'Delete'}).click();
+        await new Promise(r => setTimeout(r, 1000));
+        await page.getByRole('button', { name: 'Delete', exact: true }).click();
+        await new Promise(r => setTimeout(r, 1000));
+        await expect(page.url()).toEqual(`${url}pages`);
+        await page.screenshot({path: `./screenshots/page/page-deleted.png`})        
+        console.log(`----------page deleted successfully----------`);
+        
 
-})
-
-test('create page, delete and confirm successful deletion', async ({ page }) => {
-    const url: string = 'http://localhost:2368/ghost/#/';
-    await page.goto(url);
-
-    await page.locator('[id="identification"]').fill('j.villadap@uniandes.edu.co');
-    await page.locator('[id="password"]').fill('-9Js9QVhy:V_nmT');
-    await page.locator('[data-test-button="sign-in"]').click();
-    //Create post
-    await page.goto(`${url}pages`);   
-    await page.goto(`${url}editor/page`)
-    const fakeTitle : string = faker.lorem.word();
-    await page.locator('[placeholder="Page title"]').fill(fakeTitle);
-    await page.locator('[data-koenig-dnd-droppable="true"]').fill(fakeTitle);
-    await page.locator('[data-test-button="publish-flow"]').click();
-    await page.locator('[data-test-button="continue"]').click();
-    await new Promise(r => setTimeout(r, 1000));
-    await page.locator('[data-test-button="confirm-publish"]').dispatchEvent('click');
-    await new Promise(r => setTimeout(r, 1000));
-    await page.goto(`${url}pages`);
-    const postName = await page.locator('[class="gh-content-entry-title"]').first().innerText();
-    await page.getByText(postName).click();
-
-    await page.locator('[title="Settings"]').click();
-    await page.getByText('Delete page').click();
-    await new Promise(r => setTimeout(r, 1000));
-    await page.getByText('Delete').last().click();
-    await new Promise(r => setTimeout(r, 1000));
-    const tablePages = await page.locator('[class="gh-content-entry-title"]').count();
-    expect(tablePages).toEqual(2);
-    await page.screenshot({path: `./screenshots/page/page${fakeTitle}-deleted.png`})
-    console.log(`----------page ${fakeTitle} deleted successfully----------`);
-
+    })
 })
