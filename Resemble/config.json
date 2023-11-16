@@ -1,6 +1,8 @@
 {
-    "url":"https://monitor177.github.io/color-palette/",
+    "urlIni": "../GHOST_4_44_0/Kraken/reports",
+    "urlFin": "../GHOST_5_68_0/Kraken/reports",  
     "browsers":["chromium", "webkit", "firefox"],
+    "carpetas": ["Delete Page", "Delete Post", "Delete Tag", "Delete Member", "Edit name blog", "Edit Page","Edit Post","Edit Tag","Login","New member","New Page","New Post","New Tag","Unpublish Page","Unpublish post"],
     "options":{
         "output": {
             "errorColor": {
