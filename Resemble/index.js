@@ -38,16 +38,10 @@ async function executeTest() {
     // Recorrer cada archivo en la primera carpeta
     for (const file of files1) {
       // Obtener el nombre del archivo
-
-      // Obtener el contenido de los archivos de ambas carpetas
       const image1 = await fs.readFileSync(path.join(firstFolder + "/" + folder, file));
       const image2 = await fs.readFileSync(path.join(secondFolder + "/" + folder, file));
 
-      // Comparar las imágenes
       const data = await compareImages(image1, image2, options);
-
-      // ...
-
 
       resultInfo[file] = {
         isSameDimensions: data.isSameDimensions,
@@ -127,8 +121,6 @@ async function main() {
 
   fs.writeFileSync(`./results/${datetime}/report.html`, createReport(datetime, respuesta));
   fs.copyFileSync('./index.css', `./results/${datetime}/index.css`);
-  //fs.cpSync("./screenshots", `../docs/screenshots`, { recursive: true });
-
   console.log("-------------------------------------------------------------");
   console.log("Execution finished. Check the report under the results folder");
 }
