@@ -4,13 +4,13 @@ Carlos Andrés Tiguaque Tocora - c.tiguaque@uniandes.edu.co
 
 # Pruebas automatizadas con Kraken
 
-Este proyecto de prueba utiliza Kraken para realizar ejecuciones de 12 escenarios. Las pruebas simulan la navegación y la interacción del usuario con elementos en la página web "http://localhost:2368/ghost/".
+Este proyecto de prueba utiliza Kraken para realizar ejecuciones de 15 escenarios. Las pruebas simulan la navegación y la interacción del usuario con elementos en la página web "http://localhost:2368/ghost/". Se ejecutan pruebas en las versiones v4.44.0 y v5.68.0 de GHOST, adicionalmente se realiza la ejecucón de Resemble para las pruebas de regresión visual comparando los resultados obtenidos en cada una de las versiones de GHOTS mencionadas
 
 ## Requisitos
 
 Asegúrate de tener instaladas las siguientes herramientas:
 
-- [Ghost](https://github.com/TryGhost/Ghost) v5.68.0
+- [Ghost](https://github.com/TryGhost/Ghost) v5.68.0 y v4.44.0
 - [Node.js](https://nodejs.org/) v12.16.1.
 - [NPM](https://www.npmjs.com/) v6.13.4
 - [Android Debug Bridge](https://developer.android.com/tools/adb?hl=es-419) v1.0.41
@@ -21,7 +21,7 @@ Sigue estos pasos para configurar el entorno de prueba:
 
 1. Descarga este repositorio en tu sistema.
 
-2. Abre una terminal y navega al directorio del proyecto y ubicate en la carpeta "Kraken".
+2. Abre una terminal y navega al directorio del proyecto y ubicate en la carpeta "GHOST_4_44_0/Kraken".
 
 3. Ejecuta el siguiente comando para instalar las kraken-node:
 
@@ -53,7 +53,7 @@ Para ejecutar las pruebas, sigue estos pasos:
 
 1. Asegurate que esta corriendo correctamente el aplicativo GHOST localmente en el puerto 2368.
 
-2. Abre una terminal en el directorio "Kraken" del proyecto.
+2. Abre una terminal en el directorio "GHOST_4_44_0/Kraken" del proyecto.
 
 3. Lanza las pruebas con el siguiente comando:
 
@@ -62,7 +62,9 @@ Para ejecutar las pruebas, sigue estos pasos:
 
 4. Se abrirá el navegador y comenzarán a ejecutarse las pruebas. No realices ninguna acción en la máquina mientras las pruebas estén en ejecución, ya que esto podría detener la ejecución y producir resultados incompletos.
 
-5. Al finalizar la ejecución, podrás ver los resultados en la terminal, también encontraras evidencia de las ejecuciones en la carpeta "Kraken/reports" .
+5. Al finalizar la ejecución, podrás ver los resultados en la terminal, también encontraras evidencia de las ejecuciones en la carpeta "GHOST_4_44_0/Kraken/reports" .
+
+6. Al finalizar la ejecución de las pruebas en la carpeta: ""GHOST_4_44_0/Kraken" seguir el mismo proceso en la ruta: "GHOST_5_68_0/Kraken"
 
 ## Observaciones
 Se creó un archivo .feature por cada escenario con el fin de que la ejecución se realice de forma secuencial, un escenario posterior al otro. 
