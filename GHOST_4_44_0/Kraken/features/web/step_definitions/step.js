@@ -418,11 +418,13 @@ When('I validate that the member {kraken-string} not exists', async function (ti
 });
 
 AfterStep(async function (step) {
-    const dirName = step.pickle.name;
+    let dirName = step.pickle.name;
     const stepText = step.pickle.name;
-    const fileName = `${stepText}${sec}.png`;
+    let fileName = `${stepText}${sec}.png`;
   
-    // Check if directory exists, create it if not
+    dirName = dirName.replace(/\s+/g, '_');
+    fileName = fileName.replace(/\s+/g, '_');
+
     const reportsDir = `./reports/${dirName}`;
     if (!fs.existsSync(reportsDir)) {
       fs.mkdirSync(reportsDir, { recursive: true });

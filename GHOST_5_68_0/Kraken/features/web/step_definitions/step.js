@@ -412,9 +412,12 @@ When('I validate that the member {kraken-string} not exists', async function (ti
 });
 
 AfterStep(async function (step) {
-    const dirName = step.pickle.name;
+    let dirName = step.pickle.name;
     const stepText = step.pickle.name;
-    const fileName = `${stepText}${sec}.png`;
+    let fileName = `${stepText}${sec}.png`;
+
+    dirName = dirName.replace(/\s+/g, '_');
+    fileName = fileName.replace(/\s+/g, '_');
 
     // Check if directory exists, create it if not
     const reportsDir = `./reports/${dirName}`;
