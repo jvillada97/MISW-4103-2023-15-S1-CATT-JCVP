@@ -6,7 +6,7 @@ Scenario: Unpublish post
   When I enter my email "<EMAIL>"
   And I enter my password "<PASSWORD>"
   And I click enter
-  Then I validate login successful
+  And I validate login successful
   And I click post
   And I validate that the post "<POST2>" not exists
   And I click new post

@@ -6,7 +6,7 @@ Scenario: New Tag
   When I enter my email "<EMAIL>"
   And I enter my password "<PASSWORD>"
   And I click enter
-  Then I validate login successful
+  And I validate login successful
   And I click tag
   And I validate that the tag "<TAG>" not exists
   And I click new tag

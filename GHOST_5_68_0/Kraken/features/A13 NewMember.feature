@@ -6,8 +6,8 @@ Scenario: New member
   When I enter my email "<EMAIL>"
   And I enter my password "<PASSWORD>"
   And I click enter
-  Then I validate login successful
-  When I click members
+  And I validate login successful
+  And I click members
   And I click new member
   And I enter name member "<NAME-MEMBER>"
   And I enter email member "<EMAIL-MEMBER>"

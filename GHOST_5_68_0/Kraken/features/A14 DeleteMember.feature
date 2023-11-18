@@ -6,9 +6,9 @@ Scenario: Delete Member
   When I enter my email "<EMAIL>"
   And I enter my password "<PASSWORD>"
   And I click enter
-  Then I validate login successful
-  When I click members
-  Then I validate that the member "<NAME-MEMBER>" exists and select it
+  And I validate login successful
+  And I click members
+  And I validate that the member "<NAME-MEMBER>" exists and select it
   And I delete member
   And I wait for 3 seconds
   And I confirm delete the member

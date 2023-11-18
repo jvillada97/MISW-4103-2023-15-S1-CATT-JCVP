@@ -6,8 +6,8 @@ Scenario: Edit name blog
   When I enter my email "<EMAIL>"
   And I enter my password "<PASSWORD>"
   And I click enter
-  Then I validate login successful
-  When I click config
+  And I validate login successful
+  And I click config
   And I click general
   And I click expand
   And I wait for 3 seconds

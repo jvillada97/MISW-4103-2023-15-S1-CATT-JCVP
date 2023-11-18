@@ -6,7 +6,7 @@ Scenario: New Page
   When I enter my email "<EMAIL>"
   And I enter my password "<PASSWORD>"
   And I click enter
-  Then I validate login successful
+  And I validate login successful
   And I click page
   And I validate that the page "<PAGE>" not exists
   And I click new page
