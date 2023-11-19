@@ -37,6 +37,11 @@ When('I click enter', async function () {
 
 });
 
+Then('I expect to see {string}', async function (error) {
+loginPage=new LoginPage(this.driver);
+await loginPage.validateError(error);
+  });
+
 Then('I validate login fail', async function () {
     loginPage = new LoginPage(this.driver);
     expect(await loginPage.validateLogin(), 'Error, no debía permitir loguear', false);

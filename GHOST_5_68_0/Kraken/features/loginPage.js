@@ -1,3 +1,5 @@
+var { expect } = require('chai');
+
 class LoginPage {
   constructor(driver) {
     this.driver = driver;
@@ -18,6 +20,14 @@ class LoginPage {
     return await element.setValue(password);
   }
 
+  async validateError(error) {
+    if (await this.driver.$('.main-error').isExisting()) {
+      var alertText = await this.driver.$('.main-error').getText();
+      expect(alertText).to.include(error);
+    }
+  }
+  
+
   async loginButton() {
     let element = await this.driver.$('#ember5');
     return await element.click();
@@ -34,5 +44,4 @@ class LoginPage {
     }
   }
 }
-
 module.exports = LoginPage;

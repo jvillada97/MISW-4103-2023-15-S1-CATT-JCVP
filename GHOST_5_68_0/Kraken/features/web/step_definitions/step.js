@@ -1,4 +1,4 @@
-const { Given, When, Then, AfterStep } = require('@cucumber/cucumber');
+const { Given, When, Then, AfterStep, BeforeStep } = require('@cucumber/cucumber');
 const { expect } = require('chai')
 const LoginPage = require('../../loginPage');
 const PostPage = require('../../postPage')
@@ -15,6 +15,7 @@ let tagPage;
 let blogPage;
 let memberPage;
 let sec = 1;
+
 
 // EVENTOS DE LOGIN
 
@@ -35,6 +36,11 @@ When('I click enter', async function () {
     await loginPage.loginButton();
 
 });
+
+Then('I expect to see {string}', async function (error) {
+loginPage=new LoginPage(this.driver);
+await loginPage.validateError(error);
+  });
 
 Then('I validate login fail', async function () {
     loginPage = new LoginPage(this.driver);
@@ -357,6 +363,11 @@ Then('I validate new title {kraken-string}', async function (title) {
 
 // EVENTOS MEMBER
 
+When('I click members1', async function () {
+    memberPage = new MemberPage(this.driver);
+    await memberPage.member1Button();
+});
+
 When('I click members', async function () {
     memberPage = new MemberPage(this.driver);
     await memberPage.memberButton();
@@ -415,20 +426,19 @@ AfterStep(async function (step) {
     let dirName = step.pickle.name;
     const stepText = step.pickle.name;
     let fileName = `${stepText}${sec}.png`;
-
+  
     dirName = dirName.replace(/\s+/g, '_');
     fileName = fileName.replace(/\s+/g, '_');
 
-    // Check if directory exists, create it if not
     const reportsDir = `./reports/${dirName}`;
     if (!fs.existsSync(reportsDir)) {
-        fs.mkdirSync(reportsDir, { recursive: true });
+      fs.mkdirSync(reportsDir, { recursive: true });
     }
-
+  
     let screenshot = await this.driver.saveScreenshot(
-        `./reports/${dirName}/${fileName}`
+      `./reports/${dirName}/${fileName}`
     );
     this.attach(screenshot, 'image/png');
     sec = sec + 1;
     return;
-});
+  });

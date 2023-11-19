@@ -1,3 +1,5 @@
+var { expect } = require('chai');
+
 class LoginPage {
   constructor(driver) {
     this.driver = driver;
@@ -16,6 +18,13 @@ class LoginPage {
   async passwordInput(password) {
     let element = await this.driver.$('input[name="password"]');
     return await element.setValue(password);
+  }
+
+  async validateError(error) {
+    let element = await this.driver.$('.main-error');
+    element.waitForDisplayed(5000);
+    var alertText = await this.driver.$('.main-error').getText();
+    expect(alertText).to.include(error);
   }
 
   async loginButton() {
