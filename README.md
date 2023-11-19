@@ -197,6 +197,7 @@ Elementos properties.json:
 Asegúrate de tener instaladas las siguientes herramientas:
 
 - [Ghost](https://github.com/TryGhost/Ghost) v5.68.0
+- [Ghost](https://github.com/TryGhost/Ghost) v4.44.0
 - [Node.js](https://nodejs.org/) >= v18.17.0
 - [NPM](https://www.npmjs.com/) >= v10.2.0
 
@@ -206,32 +207,26 @@ Sigue estos pasos para configurar el entorno de prueba:
 
 1. Descarga este repositorio en tu sistema.
 
-2. Abre una terminal y navega al directorio del proyecto, adicional hay que ingresar a la carpeta playwright_ts. Dado que es la raiz del proyecto.
+2. Abre una terminal y entra a la raiz del proyecto con cd MISW-4103-2023-15-S1-CATT-JCVP . Dentro de la raiz del proyecto ingresar a la carpeta correspondiente de las pruebas en la versión que quiera ejecutar. Si desea correr las pruebas de la versión 5.68.0 utilice: cd GHOST_5_68_0/playwright_ts/ . Si desea ejecutar la versión 4.44.0 utilice: cd GHOST_4_44_0/playwright_ts/ . 
 
-3. Ejecuta el siguiente comando para instalar Playwright: npm install playwright
+3. Ejecuta el siguiente comando para instalar Playwright: npm install playwright, esto debe hacerse en los directorios de ambas versiones.
 
-4. En el mismo folder ejecutar el siguiente comando para descargar faker: npm install @faker-js/faker
+4. En el mismo folder ejecutar el siguiente comando para descargar faker: npm install @faker-js/faker, esto debe hacerse en los directorios de ambas versiones.
 
 ## Ejecución de pruebas
 
 Para ejecutar las pruebas, sigue estos pasos:
 
-1. Asegurate que esta corriendo correctamente el aplicativo GHOST localmente en el puerto 2368.
+1. Asegurate que esta corriendo correctamente el aplicativo GHOST localmente en el puerto 2368 y 3002 para cada una de las versiones. 
 
-2. Abre una terminal en el directorio "playwright_ts" del proyecto.
+2. Dentro de la raiz del proyecto ingresar a la carpeta correspondiente de las pruebas en la versión que quiera ejecutar. Si desea correr las pruebas de la versión 5.68.0 utilice: cd GHOST_5_68_0/playwright_ts/ . Si desea ejecutar la versión 4.44.0 utilice: cd GHOST_4_44_0/playwright_ts/ .
 
-3. Borrar todos los posts, tags y pages de ghost.
-
-4. Ejecuta el comando: npx playwright test. Este comando ejecutara todas los tests que se encuentran en los archivos dentro del folder "test" en la raiz principal del proyecto. 
+3. Ejecuta el comando: npx playwright test. Este comando ejecutara todas los tests que se encuentran en los archivos dentro del folder "test" dentro de cada una de las carpetas de las versiones. 
 
 ## Observaciones
 
 Es importante que en caso de que ghost no reconozca el usuario, se debe cambiar por un email valido creado anteriormente en ghost en la sentencia: await page.locator('[id="identification"]').fill('CORREO_VALIDO_AQUI');
 y tambien la correspondiente contraseña en la siguiente sentencia: await page.locator('[id="password"]').fill('PASSWORD_AQUI');. Se recomienda hacer este cambio con la ayuda del editor de codigo VS code en todos los archivos dentro del folder "test"
-
-Tambien es importante que antes de iniciar la ejecución se deben borrar todos los posts, pages y tags en ghost.
-
-
 
 # Pruebas de regresión visual RESEMBLEJS
 
@@ -278,3 +273,31 @@ Cualquier archivo o carpeta con un nombre diferente en estas ubicaciones, debe s
    node index.js
 
 4. En la carpeta "Resemble/results" se genera una carpeta con la fecha de ejecución, en esta carpeta podrás encontrar las imagenes de cada comparación y un archivo "report.html" con el reporte que se genera como resultado de la ejecución de las pruebas d regresión visual.
+
+# Pruebas de regresión visual Backstop.JS
+
+## Requisitos
+
+Asegúrate de tener instaladas las siguientes herramientas:
+
+- [Node.js](https://nodejs.org/) >= v18.17.0
+- [NPM](https://www.npmjs.com/) >= v10.2.0
+- [Python](https://www.python.org/) >= 3.11.0
+
+## Instalación
+
+1. Descarga este repositorio en tu sistema.
+
+2. Abre una terminal y navega al directorio del proyecto, adicional hay que ingresar a la carpeta Backstop. Dado que es la raiz del proyecto.
+
+3. Dentro de la carpeta Backstop se debe ejecutar el siguiente comando: npm install -g backstopjs. 
+
+## Ejecución de pruebas
+
+1. En este punto hay que verificar que la versión de python instalada en el computador sea >= 3.11.0 Esto se hace con el comando python --version o python3 --version. 
+
+2. Utilizando el prefijo que utilizó en el paso anterior (python o python3) ejecute el siguiente comando: python(3) execute.py . Esto ejecutara el script que ejecuta las pruebas de comparación visual entre los screenshots proporcionados por la herramienta Kraken, para cada una de las versiones de ghost. 
+
+## Observaciones 
+
+Los reportes html generados para cada una de los escenarios de prueba se encontraran en la ruta './backstop_data/' teniendo en cuenta que estamos en la carpeta Backstop del repositorio. 
