@@ -1,0 +1,108 @@
+{
+    "id": "testid_",
+    "viewports": [
+        {
+            "label": "",
+            "width": 1200,
+            "height": 648
+        }
+    ],
+    "onBeforeScript": "puppet/onBefore.js",
+    "onReadyScript": "puppet/onReady.js",
+    "scenarios": [
+        {
+            "label": "Login1",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login1.png",
+            "referenceUrl": "../GHOST_4_44_0/Kraken/reports/Delete Page/DeletePage4.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login2",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login2.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login3",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login3.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login4",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login4.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login5",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login5.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login6",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login6.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login7",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login7.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login8",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login8.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login9",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login9.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login10",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login10.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login11",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login11.png",
+            "misMatchThreshold": 3
+        },
+        {
+            "label": "Login12",
+            "cookiePath": "backstop_data/engine_scripts/cookies.json",
+            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login12.png",
+            "misMatchThreshold": 3
+        }
+    ],
+    "paths": {
+        "bitmaps_reference": "../GHOST_4_44_0/Kraken/reports/Login/",
+        "bitmaps_test": "backstop_data/bitmaps_test",
+        "engine_scripts": "backstop_data/engine_scripts",
+        "html_report": "backstop_data/html_report",
+        "ci_report": "backstop_data/ci_report"
+    },
+    "report": [
+        "browser"
+    ],
+    "engine": "puppeteer",
+    "fileNameTemplate": "{scenarioLabel}",
+    "engineOptions": {
+        "args": [
+            "--no-sandbox"
+        ]
+    },
+    "asyncCaptureLimit": 5,
+    "asyncCompareLimit": 50,
+    "debug": false,
+    "debugWindow": false
+}
