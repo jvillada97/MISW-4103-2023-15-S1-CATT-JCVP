@@ -7,15 +7,18 @@ test.describe.serial("Posts E2E Scenarios", () => {
     test.beforeEach(async ({ page }) =>{
         const user: string = 'j.villadap@uniandes.edu.co';
         const password: string =  'hola123456';
+        //Given
         await page.goto('http://localhost:3002/ghost/#/');
         await page.screenshot({path: './screenshots/post/login/step1.png'})
+        //When
         await page.getByPlaceholder('jamie@example.com').fill(user);
         await page.screenshot({path: './screenshots/post/login/step2.png'})
+        //And
         await page.getByPlaceholder('•••••••••••••••').fill(password);
         await page.screenshot({path: './screenshots/post/login/step3.png'})
         await page.getByRole('button', { name: 'Sign in →', exact: true}).click();
         await page.screenshot({path: './screenshots/post/login/step4.png'})
-        // Expect the url "to contain" a substring.
+        // Then
         await expect(page.getByTitle('Dashboard')).toBeVisible();
         console.log("----------Login successful----------");
         await page.screenshot({path: './screenshots/post/login/step5.png'})
@@ -23,10 +26,12 @@ test.describe.serial("Posts E2E Scenarios", () => {
     
     test('create post and verify successful creation', async ({ page }) => {
         const url: string = 'http://localhost:3002/ghost/#/';
-        //Create post
+        //Given
         await page.goto(`${url}posts`); 
+        //When
         await new Promise(r => setTimeout(r, 1000));
         await page.screenshot({path: './screenshots/post/creation/step1.png'})  
+        //And
         await page.goto(`${url}editor/post`)
         await page.screenshot({path: './screenshots/post/creation/step2.png'})
         const fakeTitle : string = faker.lorem.word();
@@ -43,6 +48,7 @@ test.describe.serial("Posts E2E Scenarios", () => {
         await page.locator('button.gh-btn.gh-btn-black.gh-btn-icon.ember-view').click();
         await page.screenshot({path: './screenshots/post/creation/step7.png'})
         await new Promise(r => setTimeout(r, 1000));
+        //Then
         await expect(page.getByText(fakeTitle)).toBeVisible();
         await page.screenshot({path: './screenshots/post/creation/step8.png'})
         console.log(`----------post ${fakeTitle} created successfully----------`);
@@ -52,9 +58,12 @@ test.describe.serial("Posts E2E Scenarios", () => {
     test('edit existing post and verify changes done', async ({ page }) => {
         
         const url: string = 'http://localhost:3002/ghost/#/';
+        //Given
         await page.goto(`${url}posts`);
+        //When
         await new Promise(r => setTimeout(r, 1000));   
         await page.screenshot({path: './screenshots/post/edition/step1.png'})
+        //And
         await page.locator('h3.gh-content-entry-title').first().click();
         await new Promise(r => setTimeout(r, 1000));
         await page.screenshot({path: './screenshots/post/edition/step2.png'})
@@ -70,6 +79,7 @@ test.describe.serial("Posts E2E Scenarios", () => {
         await page.screenshot({path: './screenshots/post/edition/step5.png'})
         await page.goto(`${url}posts`);
         await new Promise(r => setTimeout(r, 1000));
+        //Then
         await expect(page.getByText(initialFakeTitle)).toBeVisible();
         await page.screenshot({path: './screenshots/post/edition/step6.png'})
         console.log(`----------post ${initialFakeTitle} edited successfully----------`);

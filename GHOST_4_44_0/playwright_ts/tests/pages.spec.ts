@@ -5,16 +5,19 @@ test.describe.serial("Pages E2E Scenarios", () => {
     test.beforeEach(async ({ page }) =>{
         const user: string = 'j.villadap@uniandes.edu.co';
         const password: string =  'hola123456';
+        //Given
         await page.goto('http://localhost:3002/ghost/#/');
+        //When
         await new Promise(r => setTimeout(r, 1000));
         await page.screenshot({path: `./screenshots/page/login/step1.png`})
+        //And
         await page.getByPlaceholder('jamie@example.com').fill(user);
         await page.screenshot({path: `./screenshots/page/login/step2.png`})
         await page.getByPlaceholder('•••••••••••••••').fill(password);
         await page.screenshot({path: `./screenshots/page/login/step3.png`})
         await page.getByRole('button', { name: 'Sign in →', exact: true}).click();
         await page.screenshot({path: `./screenshots/page/login/step4.png`})
-        // Expect the url "to contain" a substring.
+        // Then
         await expect(page.getByTitle('Dashboard')).toBeVisible();
         console.log("----------Login successful----------");
         await page.screenshot({path: `./screenshots/page/login/step5.png`})
@@ -24,10 +27,12 @@ test.describe.serial("Pages E2E Scenarios", () => {
     
     test('creates page and verify successful creation', async ({ page }) => {
         const url: string = 'http://localhost:3002/ghost/#/';
-        //Create page
+        //Given
         await page.goto(`${url}pages`);
+        //When
         await new Promise(r => setTimeout(r, 1000));
         await page.screenshot({path: `./screenshots/page/creation/step1.png`})
+        //And
         await page.goto(`${url}editor/page`);
         await page.screenshot({path: `./screenshots/page/creation/step2.png`})
         const fakePage = faker.lorem.word();
@@ -41,6 +46,7 @@ test.describe.serial("Pages E2E Scenarios", () => {
         await page.locator('button.gh-btn.gh-btn-black.gh-publishmenu-button.gh-btn-icon.ember-view').click();
         await page.screenshot({path: `./screenshots/page/creation/step6.png`})
         await new Promise(r => setTimeout(r, 1000));
+        //Then
         await expect(page.getByText(fakePage).first()).toBeVisible();
         await page.screenshot({path: `./screenshots/page/creation/step7.png`})
         console.log(`----------page ${fakePage} created successfully----------`);
@@ -50,10 +56,12 @@ test.describe.serial("Pages E2E Scenarios", () => {
     
     test('edits page recently created', async( { page }) => {
         const url: string = 'http://localhost:3002/ghost/#/';
-        
+        //Given
         await page.goto(`${url}pages`);
         await page.screenshot({path: `./screenshots/page/edition/step1.png`})
+        //When
         await page.locator('h3.gh-content-entry-title').first().click();
+        //And
         await new Promise(r => setTimeout(r, 1000));
         await page.screenshot({path: `./screenshots/page/edition/step2.png`})
         await new Promise(r => setTimeout(r, 2000));
@@ -67,6 +75,7 @@ test.describe.serial("Pages E2E Scenarios", () => {
         await page.locator('button.gh-btn.gh-btn-black.gh-publishmenu-button.gh-btn-icon.ember-view').click();
         await page.screenshot({path: `./screenshots/page/edition/step5.png`})
         await page.goto(`${url}pages`);
+        //Then
         expect(page.getByText(initialFakeTitle)).toBeVisible();
         await new Promise(r => setTimeout(r, 1000));
         await page.screenshot({path: `./screenshots/page/edition/step6.png`})
@@ -77,10 +86,12 @@ test.describe.serial("Pages E2E Scenarios", () => {
    
     test('deletes page recently edited', async( { page }) => {
         const url: string = 'http://localhost:3002/ghost/#/';
-        
+        //Given
         await page.goto(`${url}pages`);
         await page.screenshot({path: `./screenshots/page/deletion/step1.png`}) 
+        //When
         await page.locator('h3.gh-content-entry-title').first().click();
+        //And
         await new Promise(r => setTimeout(r, 1000));
         await page.screenshot({path: `./screenshots/page/deletion/step2.png`}) 
         await new Promise(r => setTimeout(r, 2000));
@@ -92,6 +103,7 @@ test.describe.serial("Pages E2E Scenarios", () => {
         await page.getByRole('button', { name: 'Delete', exact: true }).click();
         await page.screenshot({path: `./screenshots/page/deletion/step5.png`}) 
         await new Promise(r => setTimeout(r, 1000));
+        //Then
         await expect(page.url()).toEqual(`${url}pages`);
         console.log(`----------page deleted successfully----------`);
         
