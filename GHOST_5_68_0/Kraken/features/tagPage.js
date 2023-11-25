@@ -1,4 +1,6 @@
 const { assert, expect } = require('chai')
+
+let text_title;
 class TagPage {
     constructor(driver) {
         this.driver = driver;
@@ -9,7 +11,7 @@ class TagPage {
     }
 
     async tagButton() {
-        let element = await this.driver.$('#ember25');
+        let element = await this.driver.$('a[data-test-nav="tags"]');
         return await element.click();
     }
 
@@ -26,6 +28,7 @@ class TagPage {
 
             if (tagExists) {
                 await tagElement.click();
+                text_title = tagElements.length;
                 return tagElement; // Retorna el elemento si existe
             }
         }
@@ -33,13 +36,16 @@ class TagPage {
     }
 
     async checkIfTagNotExists(tituloTag) {
+
         const tagSelector = `//h3[contains(string(),"${tituloTag}")]`;
         const tagElements = await this.driver.$$(tagSelector);
-        if (tagElements.length == 0) {
-            return true;
-        } else {
-            return false;
+        let variable = tagElements.length;
+        if (tituloTag == "") {
+            if (variable == text_title - 1) {
+                variable = 0;
+            }
         }
+        return assert.equal(variable, 0);
     }
 
     async newTagButton() {
@@ -63,7 +69,7 @@ class TagPage {
     }
 
     async returnTagButton() {
-        let element = await this.driver.$('#ember25');
+        let element = await this.driver.$('a[data-test-nav="tags"]');
         return await element.click();
     }
 

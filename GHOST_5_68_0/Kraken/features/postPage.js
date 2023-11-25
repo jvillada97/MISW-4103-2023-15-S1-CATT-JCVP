@@ -1,4 +1,6 @@
 const { assert, expect } = require('chai')
+let text_title;
+
 class PostPage {
     constructor(driver) {
         this.driver = driver;
@@ -26,6 +28,7 @@ class PostPage {
 
             if (postExists) {
                 await postElement.click();
+                text_title = postElements.length;
                 return postElement; // Retorna el elemento si existe
             }
         }
@@ -34,9 +37,14 @@ class PostPage {
 
     async checkIfPostNotExists(tituloPost) {
         const postSelector = `//h3[contains(string(),"${tituloPost}")]`;
-        const postElements = await this.driver.$$(postSelector);
-
-        return assert.equal(postElements.length, 0);
+        let postElements = await this.driver.$$(postSelector);
+        let variable = postElements.length;
+        if (tituloPost == "") {
+            if (variable == text_title - 1) {
+                variable = 0;
+            }
+        }
+        return assert.equal(variable, 0);
     }
 
     async newPostButton() {

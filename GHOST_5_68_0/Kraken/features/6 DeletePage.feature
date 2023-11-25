@@ -8,9 +8,9 @@ Scenario: Delete Page
   And I click enter
   And I validate login successful
   And I click page
-  And I validate that the page "<TEXT-PAGE2>" exists and select it
+  And I validate that the page exists and select it
   And I activate sidebar page
   And I delete page
   And I confirm delete the page
-  Then I validate that the page "<TEXT-PAGE2>" not exists
+  Then I validate that the page not exists
   And I wait for 3 seconds

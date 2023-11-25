@@ -8,14 +8,15 @@ Scenario: New Page
   And I click enter
   And I validate login successful
   And I click page
-  And I validate that the page "<PAGE>" not exists
+  And I load data Page
+  And I validate that the page not exists
   And I click new page
-  And I enter title page "<PAGE>"
-  And I enter text in the page "<TEXT-PAGE>"
+  And I enter title page
+  And I enter text in the page
   And I wait for 3 seconds
   And I publish my page
   And I wait for 3 seconds
   And I return page list
   And I wait for 3 seconds
-  Then I validate that the page "<PAGE>" exists and select it
+  Then I validate that the page exists and select it
   And I wait for 3 seconds

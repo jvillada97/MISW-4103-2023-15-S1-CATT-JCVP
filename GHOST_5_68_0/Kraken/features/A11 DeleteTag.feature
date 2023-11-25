@@ -8,10 +8,10 @@ Scenario: Delete Tag
   And I click enter
   And I validate login successful
   And I click tag
-  And I validate that the tag "<TEXT-TAG2>" exists and select it
+  And I validate that the tag exists and select it
   And I delete tag
   And I wait for 3 seconds
   And I confirm delete the tag
   And I wait for 3 seconds
-  Then I validate that the tag "<TEXT-TAG2>" not exists
+  Then I validate that the tag not exists
   And I wait for 3 seconds

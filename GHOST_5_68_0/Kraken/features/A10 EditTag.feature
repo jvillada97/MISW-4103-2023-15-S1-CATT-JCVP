@@ -8,11 +8,11 @@ Scenario: Edit Tag
   And I click enter
   And I validate login successful
   And I click tag
-  And I validate that the tag "<TAG>" exists and select it
-  And I enter new text in the tag "<TEXT-TAG2>"
+  And I validate that the tag exists and select it
+  And I enter new text in the tag
   And I update my tag
   And I wait for 3 seconds
   And I return tag list
   And I wait for 3 seconds
-  Then I validate that the tag "<TEXT-TAG2>" exists and select it
+  Then I validate that the tag exists and select it
   And I wait for 4 seconds
