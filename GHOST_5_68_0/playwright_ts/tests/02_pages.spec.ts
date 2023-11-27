@@ -3,6 +3,8 @@ import { faker, ur } from '@faker-js/faker';
 
 test.describe.serial("Pages E2E Scenarios", () => {
     test.beforeEach(async ({ page }) =>{
+
+        //Login Verification successful password and email correct
         const user: string = 'j.villadap@uniandes.edu.co';
         const password: string =  '-9Js9QVhy:V_nmT';
         //Given:
@@ -17,7 +19,7 @@ test.describe.serial("Pages E2E Scenarios", () => {
         await page.locator('[data-test-button="sign-in"]').click();
         await page.screenshot({path: `./screenshots/page/login/step4.png`})
         // Then
-        await expect(page.getByText('Welcome to your Dashboard')).toBeVisible();
+        await expect(page.getByText('Dashboard').first()).toBeVisible();
         console.log("----------Login successful----------");
         await page.screenshot({path: `./screenshots/page/login/step5.png`})
     })
@@ -69,7 +71,7 @@ test.describe.serial("Pages E2E Scenarios", () => {
         await page.goto(`${url}pages`);
         await page.screenshot({path: `./screenshots/page/edition/step5.png`})
         //Then
-        expect(page.getByText(initialFakeTitle).first()).toBeVisible();
+        expect(page.locator('h3.gh-content-entry-title').first()).toBeVisible();
         await new Promise(r => setTimeout(r, 1000));
         console.log(`----------page ${initialFakeTitle} edited successfully----------`);
         

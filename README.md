@@ -229,11 +229,13 @@ Sigue estos pasos para configurar el entorno de prueba:
 
 1. Descarga este repositorio en tu sistema.
 
-2. Abre una terminal y entra a la raiz del proyecto con cd MISW-4103-2023-15-S1-CATT-JCVP . Dentro de la raiz del proyecto ingresar a la carpeta correspondiente de las pruebas en la versión que quiera ejecutar. Si desea correr las pruebas de la versión 5.68.0 utilice: cd GHOST_5_68_0/playwright_ts/ . Si desea ejecutar la versión 4.44.0 utilice: cd GHOST_4_44_0/playwright_ts/ .
+2. Abre una terminal y entra a la raiz del proyecto con cd MISW-4103-2023-15-S1-CATT-JCVP . Dentro de la raiz del proyecto ingresar a la carpeta correspondiente de las pruebas en la versión que quiera ejecutar. Si desea correr las pruebas de la versión 5.68.0 utilice: cd GHOST_5_68_0/playwright_ts/ . Si desea ejecutar la versión 4.44.0 utilice: cd GHOST_4_44_0/playwright_ts/. Si se desean ejecutar las pruebas para las tecnicas de generación de datos se debe usar: cd GHOST_5_68_0/playwright_ts/
 
 3. Ejecuta el siguiente comando para instalar Playwright: npm install playwright, esto debe hacerse en los directorios de ambas versiones.
 
 4. En el mismo folder ejecutar el siguiente comando para descargar faker: npm install @faker-js/faker, esto debe hacerse en los directorios de ambas versiones.
+
+5. Ejecuta el siguiente comando para instalar la dependencia 'node-fetch', esta es necesaria para hacer las solicitudes HTTP a la API de mockaroo: npm install node-fetch 
 
 ## Ejecución de pruebas
 

@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login1.png",
-        "test": "../bitmaps_test/20231119-083309/Login1.png",
+        "test": "../bitmaps_test/20231119-125326/Login1.png",
         "selector": "document",
         "fileName": "Login1.png",
         "label": "Login1",
@@ -21,16 +21,16 @@ report({
           },
           "rawMisMatchPercentage": 4.881430041152264,
           "misMatchPercentage": "4.88",
-          "analysisTime": 382
+          "analysisTime": 231
         },
-        "diffImage": "../bitmaps_test/20231119-083309/failed_diff_Login1.png"
+        "diffImage": "../bitmaps_test/20231119-125326/failed_diff_Login1.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login2.png",
-        "test": "../bitmaps_test/20231119-083309/Login2.png",
+        "test": "../bitmaps_test/20231119-125326/Login2.png",
         "selector": "document",
         "fileName": "Login2.png",
         "label": "Login2",
@@ -46,7 +46,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1222993827160495,
           "misMatchPercentage": "1.12",
-          "analysisTime": 392
+          "analysisTime": 316
         }
       },
       "status": "pass"
@@ -54,7 +54,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login3.png",
-        "test": "../bitmaps_test/20231119-083309/Login3.png",
+        "test": "../bitmaps_test/20231119-125326/Login3.png",
         "selector": "document",
         "fileName": "Login3.png",
         "label": "Login3",
@@ -70,7 +70,7 @@ report({
           },
           "rawMisMatchPercentage": 0.9453446502057613,
           "misMatchPercentage": "0.95",
-          "analysisTime": 362
+          "analysisTime": 339
         }
       },
       "status": "pass"
@@ -78,7 +78,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login4.png",
-        "test": "../bitmaps_test/20231119-083309/Login4.png",
+        "test": "../bitmaps_test/20231119-125326/Login4.png",
         "selector": "document",
         "fileName": "Login4.png",
         "label": "Login4",
@@ -94,7 +94,7 @@ report({
           },
           "rawMisMatchPercentage": 1.0325360082304527,
           "misMatchPercentage": "1.03",
-          "analysisTime": 298
+          "analysisTime": 328
         }
       },
       "status": "pass"
@@ -102,7 +102,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login5.png",
-        "test": "../bitmaps_test/20231119-083309/Login5.png",
+        "test": "../bitmaps_test/20231119-125326/Login5.png",
         "selector": "document",
         "fileName": "Login5.png",
         "label": "Login5",
@@ -118,7 +118,7 @@ report({
           },
           "rawMisMatchPercentage": 1.0326646090534979,
           "misMatchPercentage": "1.03",
-          "analysisTime": 320
+          "analysisTime": 321
         }
       },
       "status": "pass"
@@ -126,7 +126,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login6.png",
-        "test": "../bitmaps_test/20231119-083309/Login6.png",
+        "test": "../bitmaps_test/20231119-125326/Login6.png",
         "selector": "document",
         "fileName": "Login6.png",
         "label": "Login6",
@@ -142,7 +142,7 @@ report({
           },
           "rawMisMatchPercentage": 1.0326646090534979,
           "misMatchPercentage": "1.03",
-          "analysisTime": 83
+          "analysisTime": 256
         }
       },
       "status": "pass"
@@ -150,7 +150,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login7.png",
-        "test": "../bitmaps_test/20231119-083309/Login7.png",
+        "test": "../bitmaps_test/20231119-125326/Login7.png",
         "selector": "document",
         "fileName": "Login7.png",
         "label": "Login7",
@@ -166,7 +166,7 @@ report({
           },
           "rawMisMatchPercentage": 1.0263631687242798,
           "misMatchPercentage": "1.03",
-          "analysisTime": 198
+          "analysisTime": 285
         }
       },
       "status": "pass"
@@ -174,7 +174,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login8.png",
-        "test": "../bitmaps_test/20231119-083309/Login8.png",
+        "test": "../bitmaps_test/20231119-125326/Login8.png",
         "selector": "document",
         "fileName": "Login8.png",
         "label": "Login8",
@@ -190,7 +190,7 @@ report({
           },
           "rawMisMatchPercentage": 1.122170781893004,
           "misMatchPercentage": "1.12",
-          "analysisTime": 206
+          "analysisTime": 188
         }
       },
       "status": "pass"
@@ -198,7 +198,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login9.png",
-        "test": "../bitmaps_test/20231119-083309/Login9.png",
+        "test": "../bitmaps_test/20231119-125326/Login9.png",
         "selector": "document",
         "fileName": "Login9.png",
         "label": "Login9",
@@ -214,7 +214,7 @@ report({
           },
           "rawMisMatchPercentage": 1.065329218106996,
           "misMatchPercentage": "1.07",
-          "analysisTime": 259
+          "analysisTime": 255
         }
       },
       "status": "pass"
@@ -222,7 +222,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login10.png",
-        "test": "../bitmaps_test/20231119-083309/Login10.png",
+        "test": "../bitmaps_test/20231119-125326/Login10.png",
         "selector": "document",
         "fileName": "Login10.png",
         "label": "Login10",
@@ -238,7 +238,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1530349794238681,
           "misMatchPercentage": "1.15",
-          "analysisTime": 180
+          "analysisTime": 271
         }
       },
       "status": "pass"
@@ -246,7 +246,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login11.png",
-        "test": "../bitmaps_test/20231119-083309/Login11.png",
+        "test": "../bitmaps_test/20231119-125326/Login11.png",
         "selector": "document",
         "fileName": "Login11.png",
         "label": "Login11",
@@ -262,7 +262,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1526491769547325,
           "misMatchPercentage": "1.15",
-          "analysisTime": 273
+          "analysisTime": 230
         }
       },
       "status": "pass"
@@ -270,7 +270,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login12.png",
-        "test": "../bitmaps_test/20231119-083309/Login12.png",
+        "test": "../bitmaps_test/20231119-125326/Login12.png",
         "selector": "document",
         "fileName": "Login12.png",
         "label": "Login12",
@@ -286,7 +286,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1526491769547325,
           "misMatchPercentage": "1.15",
-          "analysisTime": 233
+          "analysisTime": 104
         }
       },
       "status": "pass"
@@ -294,7 +294,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login13.png",
-        "test": "../bitmaps_test/20231119-083309/Login13.png",
+        "test": "../bitmaps_test/20231119-125326/Login13.png",
         "selector": "document",
         "fileName": "Login13.png",
         "label": "Login13",
@@ -310,7 +310,7 @@ report({
           },
           "rawMisMatchPercentage": 1.270190329218107,
           "misMatchPercentage": "1.27",
-          "analysisTime": 123
+          "analysisTime": 85
         }
       },
       "status": "pass"
@@ -318,7 +318,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login14.png",
-        "test": "../bitmaps_test/20231119-083309/Login14.png",
+        "test": "../bitmaps_test/20231119-125326/Login14.png",
         "selector": "document",
         "fileName": "Login14.png",
         "label": "Login14",
@@ -334,7 +334,7 @@ report({
           },
           "rawMisMatchPercentage": 1.0255915637860082,
           "misMatchPercentage": "1.03",
-          "analysisTime": 268
+          "analysisTime": 332
         }
       },
       "status": "pass"
@@ -342,7 +342,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login15.png",
-        "test": "../bitmaps_test/20231119-083309/Login15.png",
+        "test": "../bitmaps_test/20231119-125326/Login15.png",
         "selector": "document",
         "fileName": "Login15.png",
         "label": "Login15",
@@ -358,7 +358,7 @@ report({
           },
           "rawMisMatchPercentage": 0.9864969135802469,
           "misMatchPercentage": "0.99",
-          "analysisTime": 182
+          "analysisTime": 120
         }
       },
       "status": "pass"
@@ -366,7 +366,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login16.png",
-        "test": "../bitmaps_test/20231119-083309/Login16.png",
+        "test": "../bitmaps_test/20231119-125326/Login16.png",
         "selector": "document",
         "fileName": "Login16.png",
         "label": "Login16",
@@ -382,16 +382,16 @@ report({
           },
           "rawMisMatchPercentage": 4.645318930041152,
           "misMatchPercentage": "4.65",
-          "analysisTime": 146
+          "analysisTime": 296
         },
-        "diffImage": "../bitmaps_test/20231119-083309/failed_diff_Login16.png"
+        "diffImage": "../bitmaps_test/20231119-125326/failed_diff_Login16.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login17.png",
-        "test": "../bitmaps_test/20231119-083309/Login17.png",
+        "test": "../bitmaps_test/20231119-125326/Login17.png",
         "selector": "document",
         "fileName": "Login17.png",
         "label": "Login17",
@@ -407,7 +407,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1090534979423867,
           "misMatchPercentage": "1.11",
-          "analysisTime": 196
+          "analysisTime": 132
         }
       },
       "status": "pass"
@@ -415,7 +415,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login18.png",
-        "test": "../bitmaps_test/20231119-083309/Login18.png",
+        "test": "../bitmaps_test/20231119-125326/Login18.png",
         "selector": "document",
         "fileName": "Login18.png",
         "label": "Login18",
@@ -431,7 +431,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1090534979423867,
           "misMatchPercentage": "1.11",
-          "analysisTime": 149
+          "analysisTime": 243
         }
       },
       "status": "pass"
@@ -439,7 +439,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login19.png",
-        "test": "../bitmaps_test/20231119-083309/Login19.png",
+        "test": "../bitmaps_test/20231119-125326/Login19.png",
         "selector": "document",
         "fileName": "Login19.png",
         "label": "Login19",
@@ -455,7 +455,7 @@ report({
           },
           "rawMisMatchPercentage": 0.9166666666666666,
           "misMatchPercentage": "0.92",
-          "analysisTime": 171
+          "analysisTime": 217
         }
       },
       "status": "pass"
@@ -463,7 +463,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login20.png",
-        "test": "../bitmaps_test/20231119-083309/Login20.png",
+        "test": "../bitmaps_test/20231119-125326/Login20.png",
         "selector": "document",
         "fileName": "Login20.png",
         "label": "Login20",
@@ -479,7 +479,7 @@ report({
           },
           "rawMisMatchPercentage": 0.8784722222222221,
           "misMatchPercentage": "0.88",
-          "analysisTime": 234
+          "analysisTime": 160
         }
       },
       "status": "pass"
@@ -487,7 +487,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login21.png",
-        "test": "../bitmaps_test/20231119-083309/Login21.png",
+        "test": "../bitmaps_test/20231119-125326/Login21.png",
         "selector": "document",
         "fileName": "Login21.png",
         "label": "Login21",
@@ -503,7 +503,7 @@ report({
           },
           "rawMisMatchPercentage": 0.9907407407407408,
           "misMatchPercentage": "0.99",
-          "analysisTime": 77
+          "analysisTime": 149
         }
       },
       "status": "pass"
@@ -511,7 +511,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login22.png",
-        "test": "../bitmaps_test/20231119-083309/Login22.png",
+        "test": "../bitmaps_test/20231119-125326/Login22.png",
         "selector": "document",
         "fileName": "Login22.png",
         "label": "Login22",
@@ -527,16 +527,16 @@ report({
           },
           "rawMisMatchPercentage": 3.882973251028807,
           "misMatchPercentage": "3.88",
-          "analysisTime": 279
+          "analysisTime": 215
         },
-        "diffImage": "../bitmaps_test/20231119-083309/failed_diff_Login22.png"
+        "diffImage": "../bitmaps_test/20231119-125326/failed_diff_Login22.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login23.png",
-        "test": "../bitmaps_test/20231119-083309/Login23.png",
+        "test": "../bitmaps_test/20231119-125326/Login23.png",
         "selector": "document",
         "fileName": "Login23.png",
         "label": "Login23",
@@ -552,7 +552,7 @@ report({
           },
           "rawMisMatchPercentage": 1.0783179012345678,
           "misMatchPercentage": "1.08",
-          "analysisTime": 167
+          "analysisTime": 133
         }
       },
       "status": "pass"
@@ -560,7 +560,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login24.png",
-        "test": "../bitmaps_test/20231119-083309/Login24.png",
+        "test": "../bitmaps_test/20231119-125326/Login24.png",
         "selector": "document",
         "fileName": "Login24.png",
         "label": "Login24",
@@ -576,7 +576,7 @@ report({
           },
           "rawMisMatchPercentage": 1.0783179012345678,
           "misMatchPercentage": "1.08",
-          "analysisTime": 297
+          "analysisTime": 82
         }
       },
       "status": "pass"
@@ -584,7 +584,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login25.png",
-        "test": "../bitmaps_test/20231119-083309/Login25.png",
+        "test": "../bitmaps_test/20231119-125326/Login25.png",
         "selector": "document",
         "fileName": "Login25.png",
         "label": "Login25",
@@ -600,7 +600,7 @@ report({
           },
           "rawMisMatchPercentage": 1.0263631687242798,
           "misMatchPercentage": "1.03",
-          "analysisTime": 165
+          "analysisTime": 204
         }
       },
       "status": "pass"
@@ -608,7 +608,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login26.png",
-        "test": "../bitmaps_test/20231119-083309/Login26.png",
+        "test": "../bitmaps_test/20231119-125326/Login26.png",
         "selector": "document",
         "fileName": "Login26.png",
         "label": "Login26",
@@ -624,7 +624,7 @@ report({
           },
           "rawMisMatchPercentage": 1.122170781893004,
           "misMatchPercentage": "1.12",
-          "analysisTime": 83
+          "analysisTime": 91
         }
       },
       "status": "pass"
@@ -632,7 +632,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login27.png",
-        "test": "../bitmaps_test/20231119-083309/Login27.png",
+        "test": "../bitmaps_test/20231119-125326/Login27.png",
         "selector": "document",
         "fileName": "Login27.png",
         "label": "Login27",
@@ -648,7 +648,7 @@ report({
           },
           "rawMisMatchPercentage": 1.085133744855967,
           "misMatchPercentage": "1.09",
-          "analysisTime": 84
+          "analysisTime": 99
         }
       },
       "status": "pass"
@@ -656,7 +656,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login28.png",
-        "test": "../bitmaps_test/20231119-083309/Login28.png",
+        "test": "../bitmaps_test/20231119-125326/Login28.png",
         "selector": "document",
         "fileName": "Login28.png",
         "label": "Login28",
@@ -672,7 +672,7 @@ report({
           },
           "rawMisMatchPercentage": 1.7952674897119343,
           "misMatchPercentage": "1.80",
-          "analysisTime": 281
+          "analysisTime": 89
         }
       },
       "status": "pass"
@@ -680,7 +680,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login29.png",
-        "test": "../bitmaps_test/20231119-083309/Login29.png",
+        "test": "../bitmaps_test/20231119-125326/Login29.png",
         "selector": "document",
         "fileName": "Login29.png",
         "label": "Login29",
@@ -696,7 +696,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1688528806584362,
           "misMatchPercentage": "1.17",
-          "analysisTime": 227
+          "analysisTime": 97
         }
       },
       "status": "pass"
@@ -704,7 +704,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login30.png",
-        "test": "../bitmaps_test/20231119-083309/Login30.png",
+        "test": "../bitmaps_test/20231119-125326/Login30.png",
         "selector": "document",
         "fileName": "Login30.png",
         "label": "Login30",
@@ -720,7 +720,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1688528806584362,
           "misMatchPercentage": "1.17",
-          "analysisTime": 168
+          "analysisTime": 72
         }
       },
       "status": "pass"
@@ -728,7 +728,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login31.png",
-        "test": "../bitmaps_test/20231119-083309/Login31.png",
+        "test": "../bitmaps_test/20231119-125326/Login31.png",
         "selector": "document",
         "fileName": "Login31.png",
         "label": "Login31",
@@ -744,7 +744,7 @@ report({
           },
           "rawMisMatchPercentage": 0.9166666666666666,
           "misMatchPercentage": "0.92",
-          "analysisTime": 234
+          "analysisTime": 163
         }
       },
       "status": "pass"
@@ -752,7 +752,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login32.png",
-        "test": "../bitmaps_test/20231119-083309/Login32.png",
+        "test": "../bitmaps_test/20231119-125326/Login32.png",
         "selector": "document",
         "fileName": "Login32.png",
         "label": "Login32",
@@ -768,7 +768,7 @@ report({
           },
           "rawMisMatchPercentage": 1.122170781893004,
           "misMatchPercentage": "1.12",
-          "analysisTime": 220
+          "analysisTime": 112
         }
       },
       "status": "pass"
@@ -776,7 +776,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login33.png",
-        "test": "../bitmaps_test/20231119-083309/Login33.png",
+        "test": "../bitmaps_test/20231119-125326/Login33.png",
         "selector": "document",
         "fileName": "Login33.png",
         "label": "Login33",
@@ -792,7 +792,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1107253086419753,
           "misMatchPercentage": "1.11",
-          "analysisTime": 40
+          "analysisTime": 107
         }
       },
       "status": "pass"
@@ -800,7 +800,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login34.png",
-        "test": "../bitmaps_test/20231119-083309/Login34.png",
+        "test": "../bitmaps_test/20231119-125326/Login34.png",
         "selector": "document",
         "fileName": "Login34.png",
         "label": "Login34",
@@ -816,7 +816,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1433899176954734,
           "misMatchPercentage": "1.14",
-          "analysisTime": 152
+          "analysisTime": 90
         }
       },
       "status": "pass"
@@ -824,7 +824,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login35.png",
-        "test": "../bitmaps_test/20231119-083309/Login35.png",
+        "test": "../bitmaps_test/20231119-125326/Login35.png",
         "selector": "document",
         "fileName": "Login35.png",
         "label": "Login35",
@@ -840,16 +840,16 @@ report({
           },
           "rawMisMatchPercentage": 6.6446759259259265,
           "misMatchPercentage": "6.64",
-          "analysisTime": 106
+          "analysisTime": 193
         },
-        "diffImage": "../bitmaps_test/20231119-083309/failed_diff_Login35.png"
+        "diffImage": "../bitmaps_test/20231119-125326/failed_diff_Login35.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Login/Login36.png",
-        "test": "../bitmaps_test/20231119-083309/Login36.png",
+        "test": "../bitmaps_test/20231119-125326/Login36.png",
         "selector": "document",
         "fileName": "Login36.png",
         "label": "Login36",
@@ -865,9 +865,9 @@ report({
           },
           "rawMisMatchPercentage": 5.415380658436214,
           "misMatchPercentage": "5.42",
-          "analysisTime": 69
+          "analysisTime": 169
         },
-        "diffImage": "../bitmaps_test/20231119-083309/failed_diff_Login36.png"
+        "diffImage": "../bitmaps_test/20231119-125326/failed_diff_Login36.png"
       },
       "status": "fail"
     }

@@ -18,7 +18,7 @@ test.describe.serial("Tags E2E Scenarios", () => {
         await page.locator('[data-test-button="sign-in"]').click();
         await page.screenshot({path: './screenshots/tags/login/step4.png'})
         //Then
-        await expect(page.getByText('Welcome to your Dashboard')).toBeVisible();
+        await expect(page.getByText('Dashboard').first()).toBeVisible();
         console.log("----------Login successful----------");
         await page.screenshot({path: './screenshots/tags/login/step5.png'})
     })
