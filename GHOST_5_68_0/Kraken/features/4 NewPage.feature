@@ -13,10 +13,10 @@ Scenario: New Page
   And I click new page
   And I enter title page
   And I enter text in the page
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   And I publish my page
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   And I return page list
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   Then I validate that the page exists and select it
-  And I wait for 3 seconds
+  And I wait for 1 seconds

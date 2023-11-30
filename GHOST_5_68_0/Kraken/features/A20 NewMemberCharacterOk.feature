@@ -12,12 +12,12 @@ Scenario: New member to field limit
   And I enter name member character "191"
   And I enter email member character "191"
   And I enter text member character "500"
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   And I click save member
   And I click members
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   Then I validate that the member exists and select it
-  And I wait for 2 seconds
+  And I wait for 1 seconds
 
 
 

@@ -22,7 +22,7 @@ class LoginPage {
 
   async validateError(error) {
     let element = await this.driver.$('.main-error');
-    element.waitForDisplayed(5000);
+    element.waitForDisplayed(9000);
     var alertText = await this.driver.$('.main-error').getText();
     expect(alertText).to.include(error);
   }

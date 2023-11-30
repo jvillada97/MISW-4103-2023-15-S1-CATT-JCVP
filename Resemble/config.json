@@ -2,7 +2,7 @@
     "urlIni": "../GHOST_4_44_0/Kraken/reports",
     "urlFin": "../GHOST_5_68_0/Kraken/reports",  
     "browsers":["chromium", "webkit", "firefox"],
-    "carpetas": ["Delete_Page", "Delete_Post", "Delete_Tag", "Delete_Member", "Edit_name_blog", "Edit_Page","Edit_Post","Edit_Tag","Login","New_member","New_Page","New_Post","New_Tag","Unpublish_Page","Unpublish_post"],
+    "carpetas": ["Change_password_1_character","Change_password_9_character","Change_password_10_character","Change_password_ok","Change_profile_empty_required_fields","Change_profile_exceeding_the_limit_of_required_fields","Change_profile_required_fields","Delete_Page", "Delete_Post", "Delete_Tag", "Delete_Member", "Edit_name_blog", "Edit_Page","Edit_Post","Edit_Tag","Login","New_member","New_Page","New_Post","New_Tag","Unpublish_Page","Unpublish_post", "Many_logins_and_one_successful","New_member_exceeding_field_limit","New_member_to_field_limit"],
     "options":{
         "output": {
             "errorColor": {

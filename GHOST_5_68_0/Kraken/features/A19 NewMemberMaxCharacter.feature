@@ -12,11 +12,11 @@ Scenario: New member exceeding field limit
   And I enter name member character "192"
   And I enter email member character "192"
   And I enter text member character "501"
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   And I click save member
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   Then I validate that the member failed
-  And I wait for 2 seconds
+  And I wait for 1 seconds
 
 
 

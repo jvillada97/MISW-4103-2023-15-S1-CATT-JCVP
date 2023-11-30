@@ -13,4 +13,4 @@ Scenario: Delete Post
   And I delete post
   And I confirm delete the post
   Then I validate that the post not exists
-  And I wait for 3 seconds
+  And I wait for 1 seconds

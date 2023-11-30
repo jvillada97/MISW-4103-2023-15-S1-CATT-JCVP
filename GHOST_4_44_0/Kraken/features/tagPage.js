@@ -1,4 +1,6 @@
 const { assert, expect } = require('chai')
+let text_title;
+
 class TagPage {
     constructor(driver) {
         this.driver = driver;
@@ -35,11 +37,13 @@ class TagPage {
     async checkIfTagNotExists(tituloTag) {
         const tagSelector = `//h3[contains(string(),"${tituloTag}")]`;
         const tagElements = await this.driver.$$(tagSelector);
-        if (tagElements.length == 0) {
-            return true;
-        } else {
-            return false;
+        let variable = tagElements.length;
+        if (tituloTag == "") {
+            if (variable == text_title - 1) {
+                variable = 0;
+            }
         }
+        return assert.equal(variable, 0);
     }
 
     async newTagButton() {

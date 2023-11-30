@@ -9,11 +9,11 @@ Scenario: Change password 10 character
   And I validate login successful
   And I clic avatar
   And I clic profile
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   And I enter old password "<PASSWORD>"
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   And I enter new password "10"
   And I wait for 1 seconds
   And I clic save password
   Then I validate that it ok
-  And I wait for 2 seconds
+  And I wait for 1 seconds

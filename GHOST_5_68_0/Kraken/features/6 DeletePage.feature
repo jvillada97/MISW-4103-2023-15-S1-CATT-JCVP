@@ -13,4 +13,4 @@ Scenario: Delete Page
   And I delete page
   And I confirm delete the page
   Then I validate that the page not exists
-  And I wait for 3 seconds
+  And I wait for 1 seconds

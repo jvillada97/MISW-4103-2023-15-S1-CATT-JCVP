@@ -1,3 +1,4 @@
+let text_member;
 class MemberPage {
   constructor(driver) {
     this.driver = driver;
@@ -56,6 +57,7 @@ class MemberPage {
 
       if (postExists) {
         await postElement.click();
+        text_member = postElements.length;
         return postElement; // Retorna el elemento si existe
       }
     }
@@ -77,13 +79,25 @@ class MemberPage {
   async checkIfMemberNotExists(titulo) {
     const memberSelector = `//h3[contains(string(),"${titulo}")]`;
     const memberElements = await this.driver.$$(memberSelector);
-    if (memberElements.length == 0) {
+    let variable = memberElements.length;
+
+    if (variable == text_member - 1) {
       return true;
     } else {
       return false;
     }
   }
 
+  async checkIfMemberMax() {
+    let element = await this.driver.$("div.max-width p.response").getText();
+    let element2 = await this.driver.$("div.max-width.error p.response").getText();
+    let element3 = await this.driver.$("div.gh-member-note p.response").getText();
+
+    if (element == "Name cannot be longer than 191 characters." && element2 == "Email cannot be longer than 191 characters." && element3 == "Note is too long.") {
+      return true;
+    }
+    return false;
+  }
 }
 
 module.exports = MemberPage;

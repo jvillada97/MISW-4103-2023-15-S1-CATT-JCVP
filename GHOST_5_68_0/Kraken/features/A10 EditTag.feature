@@ -11,8 +11,8 @@ Scenario: Edit Tag
   And I validate that the tag exists and select it
   And I enter new text in the tag
   And I update my tag
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   And I return tag list
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   Then I validate that the tag exists and select it
-  And I wait for 4 seconds
+  And I wait for 1 seconds

@@ -1,4 +1,5 @@
 const assert = require('assert');
+let text_title;
 
 class PagePage {
     constructor(driver) {
@@ -27,6 +28,7 @@ class PagePage {
 
             if (pageExists) {
                 await pageElement.click();
+                text_title = pageElements.length;
                 return pageElement; // Retorna el elemento si existe
             }
         }
@@ -36,10 +38,12 @@ class PagePage {
     async checkIfPageNotExists(tituloPage) {
         const pageSelector = `//h3[contains(string(),"${tituloPage}")]`;
         const pageElements = await this.driver.$$(pageSelector);
-        if (pageElements.length == 0) {
-            return true;
-        } else {
-            return false;
+        let variable = pageElements.length;
+
+        if (tituloPage == "") {
+            if (variable == text_title - 1) {
+                variable = 0;
+            }
         }
 
 

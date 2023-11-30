@@ -1,3 +1,5 @@
+const { faker } = require("@faker-js/faker");
+let title_blog = '';
 class BlogPage {
   constructor(driver) {
     this.driver = driver;
@@ -23,9 +25,10 @@ class BlogPage {
     return await element.click();
   }
 
-  async titleInput(title) {
+  async titleInput() {
+    title_blog = faker.company.name();
     let element = await this.driver.$('.ember-text-field');
-    return await element.setValue(title);
+    return await element.setValue(title_blog);
   }
 
   async saveTitle() {
@@ -33,9 +36,9 @@ class BlogPage {
     return await element.click();
   }
 
-  async validateNewTitle(title) {
+  async validateNewTitle() {
     let element = await this.driver.$('.gh-nav-menu-details-sitetitle').getText();
-    if (element == title) {
+    if (element == title_blog) {
       return true;
     } else {
       return false;

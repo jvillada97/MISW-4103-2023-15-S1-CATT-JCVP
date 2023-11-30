@@ -13,10 +13,10 @@ Scenario: New Tag
   And I click new tag
   And I enter title tag
   And I enter text in the tag
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   And I publish my tag
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   And I return tag list
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   Then I validate that the tag exists and select it
-  And I wait for 3 seconds
+  And I wait for 1 seconds

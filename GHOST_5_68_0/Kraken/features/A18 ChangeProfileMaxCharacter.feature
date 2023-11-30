@@ -9,10 +9,10 @@ Scenario: Change profile exceeding the limit of required fields
   And I validate login successful
   And I clic avatar
   And I clic profile
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   And I enter other data
   And I enter mandatory data max
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   And I clic save profile
   Then I validate that profile failed
-  And I wait for 2 seconds
+  And I wait for 1 seconds

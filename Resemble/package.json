@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "playwright": "^1.16.1",
+    "playwright": "^1.40.1",
     "resemblejs": "^5.0.0"
   }
 }

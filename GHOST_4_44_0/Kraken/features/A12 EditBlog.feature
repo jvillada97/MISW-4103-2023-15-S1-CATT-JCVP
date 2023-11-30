@@ -10,10 +10,10 @@ Scenario: Edit name blog
   And I click config
   And I click general
   And I click expand
-  And I wait for 3 seconds
-  And I enter title blog "<NAME-BLOG>"
+  And I wait for 1 seconds
+  And I enter title blog
   And I wait for 1 seconds
   And I click save
   And I wait for 1 seconds
-  Then I validate new title "<NAME-BLOG>"
-  And I wait for 3 seconds
+  Then I validate new title
+  And I wait for 1 seconds

@@ -8,10 +8,10 @@ Scenario: Delete Member
   And I click enter
   And I validate login successful
   And I click members1
-  And I validate that the member "<NAME-MEMBER>" exists and select it
+  And I validate that the member exists and select it
   And I delete member
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   And I confirm delete the member
-  And I wait for 3 seconds
-  Then I validate that the member "<TEXT-TAG2>" not exists
-  And I wait for 3 seconds
+  And I wait for 1 seconds
+  Then I validate that the member not exists
+  And I wait for 1 seconds

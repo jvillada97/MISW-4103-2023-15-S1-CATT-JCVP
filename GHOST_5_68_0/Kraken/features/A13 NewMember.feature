@@ -12,12 +12,12 @@ Scenario: New member
   And I enter name member
   And I enter email member
   And I enter text member
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   And I click save member
   And I click members
-  And I wait for 2 seconds
+  And I wait for 1 seconds
   Then I validate that the member exists and select it
-  And I wait for 2 seconds
+  And I wait for 1 seconds
 
 
 

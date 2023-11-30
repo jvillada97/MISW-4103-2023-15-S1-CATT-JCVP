@@ -10,8 +10,8 @@ Scenario: Delete Member
   And I click members
   And I validate that the member exists and select it
   And I delete member
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   And I confirm delete the member
-  And I wait for 3 seconds
+  And I wait for 1 seconds
   Then I validate that the member not exists
-  And I wait for 3 seconds
+  And I wait for 1 seconds
