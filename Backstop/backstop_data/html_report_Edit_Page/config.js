@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page1.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page1.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page1.png",
         "selector": "document",
         "fileName": "Edit_Page1.png",
         "label": "Edit_Page1",
@@ -19,18 +19,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 5.435699588477366,
-          "misMatchPercentage": "5.44",
-          "analysisTime": 68
+          "rawMisMatchPercentage": 4.881044238683128,
+          "misMatchPercentage": "4.88",
+          "analysisTime": 92
         },
-        "diffImage": "../bitmaps_test/20231119-125302/failed_diff_Edit_Page1.png"
+        "diffImage": "../bitmaps_test/20231202-112957/failed_diff_Edit_Page1.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page2.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page2.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page2.png",
         "selector": "document",
         "fileName": "Edit_Page2.png",
         "label": "Edit_Page2",
@@ -46,7 +46,7 @@ report({
           },
           "rawMisMatchPercentage": 1.122170781893004,
           "misMatchPercentage": "1.12",
-          "analysisTime": 74
+          "analysisTime": 80
         }
       },
       "status": "pass"
@@ -54,7 +54,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page3.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page3.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page3.png",
         "selector": "document",
         "fileName": "Edit_Page3.png",
         "label": "Edit_Page3",
@@ -70,7 +70,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1107253086419753,
           "misMatchPercentage": "1.11",
-          "analysisTime": 68
+          "analysisTime": 52
         }
       },
       "status": "pass"
@@ -78,7 +78,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page4.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page4.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page4.png",
         "selector": "document",
         "fileName": "Edit_Page4.png",
         "label": "Edit_Page4",
@@ -92,9 +92,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.14184670781893,
+          "rawMisMatchPercentage": 1.142875514403292,
           "misMatchPercentage": "1.14",
-          "analysisTime": 68
+          "analysisTime": 62
         }
       },
       "status": "pass"
@@ -102,7 +102,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page5.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page5.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page5.png",
         "selector": "document",
         "fileName": "Edit_Page5.png",
         "label": "Edit_Page5",
@@ -116,18 +116,17 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.6446759259259265,
-          "misMatchPercentage": "6.64",
-          "analysisTime": 76
-        },
-        "diffImage": "../bitmaps_test/20231119-125302/failed_diff_Edit_Page5.png"
+          "rawMisMatchPercentage": 1.1408179012345678,
+          "misMatchPercentage": "1.14",
+          "analysisTime": 74
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page6.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page6.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page6.png",
         "selector": "document",
         "fileName": "Edit_Page6.png",
         "label": "Edit_Page6",
@@ -141,9 +140,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 2.41576646090535,
-          "misMatchPercentage": "2.42",
-          "analysisTime": 59
+          "rawMisMatchPercentage": 2.3737139917695473,
+          "misMatchPercentage": "2.37",
+          "analysisTime": 66
         }
       },
       "status": "pass"
@@ -151,7 +150,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page7.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page7.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page7.png",
         "selector": "document",
         "fileName": "Edit_Page7.png",
         "label": "Edit_Page7",
@@ -165,9 +164,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.6895576131687244,
-          "misMatchPercentage": "1.69",
-          "analysisTime": 87
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 20
         }
       },
       "status": "pass"
@@ -175,7 +174,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page8.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page8.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page8.png",
         "selector": "document",
         "fileName": "Edit_Page8.png",
         "label": "Edit_Page8",
@@ -189,17 +188,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.8083847736625513,
-          "misMatchPercentage": "1.81",
-          "analysisTime": 109
-        }
+          "rawMisMatchPercentage": 4.045138888888889,
+          "misMatchPercentage": "4.05",
+          "analysisTime": 64
+        },
+        "diffImage": "../bitmaps_test/20231202-112957/failed_diff_Edit_Page8.png"
       },
-      "status": "pass"
+      "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page9.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page9.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page9.png",
         "selector": "document",
         "fileName": "Edit_Page9.png",
         "label": "Edit_Page9",
@@ -213,18 +213,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 5.617283950617284,
-          "misMatchPercentage": "5.62",
-          "analysisTime": 70
+          "rawMisMatchPercentage": 5.565715020576132,
+          "misMatchPercentage": "5.57",
+          "analysisTime": 64
         },
-        "diffImage": "../bitmaps_test/20231119-125302/failed_diff_Edit_Page9.png"
+        "diffImage": "../bitmaps_test/20231202-112957/failed_diff_Edit_Page9.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page10.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page10.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page10.png",
         "selector": "document",
         "fileName": "Edit_Page10.png",
         "label": "Edit_Page10",
@@ -238,18 +238,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 3.3632973251028804,
-          "misMatchPercentage": "3.36",
-          "analysisTime": 81
+          "rawMisMatchPercentage": 5.6125257201646095,
+          "misMatchPercentage": "5.61",
+          "analysisTime": 75
         },
-        "diffImage": "../bitmaps_test/20231119-125302/failed_diff_Edit_Page10.png"
+        "diffImage": "../bitmaps_test/20231202-112957/failed_diff_Edit_Page10.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page11.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page11.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page11.png",
         "selector": "document",
         "fileName": "Edit_Page11.png",
         "label": "Edit_Page11",
@@ -263,9 +263,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 2.531378600823045,
-          "misMatchPercentage": "2.53",
-          "analysisTime": 64
+          "rawMisMatchPercentage": 2.4074074074074074,
+          "misMatchPercentage": "2.41",
+          "analysisTime": 48
         }
       },
       "status": "pass"
@@ -273,7 +273,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page12.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page12.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page12.png",
         "selector": "document",
         "fileName": "Edit_Page12.png",
         "label": "Edit_Page12",
@@ -287,9 +287,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 2.467206790123457,
-          "misMatchPercentage": "2.47",
-          "analysisTime": 39
+          "rawMisMatchPercentage": 2.4074074074074074,
+          "misMatchPercentage": "2.41",
+          "analysisTime": 54
         }
       },
       "status": "pass"
@@ -297,7 +297,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page13.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page13.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page13.png",
         "selector": "document",
         "fileName": "Edit_Page13.png",
         "label": "Edit_Page13",
@@ -311,9 +311,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.8015689300411524,
-          "misMatchPercentage": "1.80",
-          "analysisTime": 71
+          "rawMisMatchPercentage": 0.0739454732510288,
+          "misMatchPercentage": "0.07",
+          "analysisTime": 29
         }
       },
       "status": "pass"
@@ -321,7 +321,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Edit_Page/Edit_Page14.png",
-        "test": "../bitmaps_test/20231119-125302/Edit_Page14.png",
+        "test": "../bitmaps_test/20231202-112957/Edit_Page14.png",
         "selector": "document",
         "fileName": "Edit_Page14.png",
         "label": "Edit_Page14",
@@ -335,12 +335,13 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.7897376543209875,
-          "misMatchPercentage": "1.79",
-          "analysisTime": 53
-        }
+          "rawMisMatchPercentage": 6.66113683127572,
+          "misMatchPercentage": "6.66",
+          "analysisTime": 57
+        },
+        "diffImage": "../bitmaps_test/20231202-112957/failed_diff_Edit_Page14.png"
       },
-      "status": "pass"
+      "status": "fail"
     }
   ],
   "id": "testid_"

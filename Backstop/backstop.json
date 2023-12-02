@@ -64,24 +64,6 @@
             "cookiePath": "backstop_data/engine_scripts/cookies.json",
             "url": "../GHOST_5_68_0/Kraken/reports/Login/Login9.png",
             "misMatchThreshold": 3
-        },
-        {
-            "label": "Login10",
-            "cookiePath": "backstop_data/engine_scripts/cookies.json",
-            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login10.png",
-            "misMatchThreshold": 3
-        },
-        {
-            "label": "Login11",
-            "cookiePath": "backstop_data/engine_scripts/cookies.json",
-            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login11.png",
-            "misMatchThreshold": 3
-        },
-        {
-            "label": "Login12",
-            "cookiePath": "backstop_data/engine_scripts/cookies.json",
-            "url": "../GHOST_5_68_0/Kraken/reports/Login/Login12.png",
-            "misMatchThreshold": 3
         }
     ],
     "paths": {

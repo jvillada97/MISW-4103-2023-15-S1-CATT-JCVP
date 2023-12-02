@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag1.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag1.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag1.png",
         "selector": "document",
         "fileName": "Delete_Tag1.png",
         "label": "Delete_Tag1",
@@ -19,9 +19,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.0263631687242798,
-          "misMatchPercentage": "1.03",
-          "analysisTime": 79
+          "rawMisMatchPercentage": 1.270190329218107,
+          "misMatchPercentage": "1.27",
+          "analysisTime": 48
         }
       },
       "status": "pass"
@@ -29,7 +29,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag2.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag2.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag2.png",
         "selector": "document",
         "fileName": "Delete_Tag2.png",
         "label": "Delete_Tag2",
@@ -45,7 +45,7 @@ report({
           },
           "rawMisMatchPercentage": 1.122170781893004,
           "misMatchPercentage": "1.12",
-          "analysisTime": 52
+          "analysisTime": 65
         }
       },
       "status": "pass"
@@ -53,7 +53,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag3.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag3.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag3.png",
         "selector": "document",
         "fileName": "Delete_Tag3.png",
         "label": "Delete_Tag3",
@@ -69,7 +69,7 @@ report({
           },
           "rawMisMatchPercentage": 1.1107253086419753,
           "misMatchPercentage": "1.11",
-          "analysisTime": 54
+          "analysisTime": 46
         }
       },
       "status": "pass"
@@ -77,7 +77,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag4.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag4.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag4.png",
         "selector": "document",
         "fileName": "Delete_Tag4.png",
         "label": "Delete_Tag4",
@@ -91,9 +91,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.1436471193415638,
+          "rawMisMatchPercentage": 1.142875514403292,
           "misMatchPercentage": "1.14",
-          "analysisTime": 50
+          "analysisTime": 66
         }
       },
       "status": "pass"
@@ -101,7 +101,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag5.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag5.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag5.png",
         "selector": "document",
         "fileName": "Delete_Tag5.png",
         "label": "Delete_Tag5",
@@ -115,18 +115,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 6.6446759259259265,
-          "misMatchPercentage": "6.64",
-          "analysisTime": 59
+          "rawMisMatchPercentage": 6.743055555555555,
+          "misMatchPercentage": "6.74",
+          "analysisTime": 68
         },
-        "diffImage": "../bitmaps_test/20231119-125259/failed_diff_Delete_Tag5.png"
+        "diffImage": "../bitmaps_test/20231202-112950/failed_diff_Delete_Tag5.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag6.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag6.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag6.png",
         "selector": "document",
         "fileName": "Delete_Tag6.png",
         "label": "Delete_Tag6",
@@ -140,9 +140,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 1.877957818930041,
-          "misMatchPercentage": "1.88",
-          "analysisTime": 42
+          "rawMisMatchPercentage": 1.9576903292181072,
+          "misMatchPercentage": "1.96",
+          "analysisTime": 56
         }
       },
       "status": "pass"
@@ -150,7 +150,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag7.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag7.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag7.png",
         "selector": "document",
         "fileName": "Delete_Tag7.png",
         "label": "Delete_Tag7",
@@ -164,18 +164,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 4.3919753086419755,
-          "misMatchPercentage": "4.39",
-          "analysisTime": 64
+          "rawMisMatchPercentage": 4.578703703703703,
+          "misMatchPercentage": "4.58",
+          "analysisTime": 63
         },
-        "diffImage": "../bitmaps_test/20231119-125259/failed_diff_Delete_Tag7.png"
+        "diffImage": "../bitmaps_test/20231202-112950/failed_diff_Delete_Tag7.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag8.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag8.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag8.png",
         "selector": "document",
         "fileName": "Delete_Tag8.png",
         "label": "Delete_Tag8",
@@ -189,18 +189,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 3.730581275720165,
-          "misMatchPercentage": "3.73",
-          "analysisTime": 96
+          "rawMisMatchPercentage": 3.815586419753086,
+          "misMatchPercentage": "3.82",
+          "analysisTime": 59
         },
-        "diffImage": "../bitmaps_test/20231119-125259/failed_diff_Delete_Tag8.png"
+        "diffImage": "../bitmaps_test/20231202-112950/failed_diff_Delete_Tag8.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag9.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag9.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag9.png",
         "selector": "document",
         "fileName": "Delete_Tag9.png",
         "label": "Delete_Tag9",
@@ -214,18 +214,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 3.730581275720165,
-          "misMatchPercentage": "3.73",
-          "analysisTime": 67
+          "rawMisMatchPercentage": 3.815586419753086,
+          "misMatchPercentage": "3.82",
+          "analysisTime": 72
         },
-        "diffImage": "../bitmaps_test/20231119-125259/failed_diff_Delete_Tag9.png"
+        "diffImage": "../bitmaps_test/20231202-112950/failed_diff_Delete_Tag9.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag10.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag10.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag10.png",
         "selector": "document",
         "fileName": "Delete_Tag10.png",
         "label": "Delete_Tag10",
@@ -239,18 +239,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 86.50707304526749,
-          "misMatchPercentage": "86.51",
-          "analysisTime": 60
+          "rawMisMatchPercentage": 99.03536522633745,
+          "misMatchPercentage": "99.04",
+          "analysisTime": 70
         },
-        "diffImage": "../bitmaps_test/20231119-125259/failed_diff_Delete_Tag10.png"
+        "diffImage": "../bitmaps_test/20231202-112950/failed_diff_Delete_Tag10.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag11.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag11.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag11.png",
         "selector": "document",
         "fileName": "Delete_Tag11.png",
         "label": "Delete_Tag11",
@@ -264,9 +264,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 2.2415123456790127,
-          "misMatchPercentage": "2.24",
-          "analysisTime": 50
+          "rawMisMatchPercentage": 2.3612397119341564,
+          "misMatchPercentage": "2.36",
+          "analysisTime": 57
         }
       },
       "status": "pass"
@@ -274,7 +274,7 @@ report({
     {
       "pair": {
         "reference": "../../../GHOST_4_44_0/Kraken/reports/Delete_Tag/Delete_Tag12.png",
-        "test": "../bitmaps_test/20231119-125259/Delete_Tag12.png",
+        "test": "../bitmaps_test/20231202-112950/Delete_Tag12.png",
         "selector": "document",
         "fileName": "Delete_Tag12.png",
         "label": "Delete_Tag12",
@@ -288,9 +288,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 2.2415123456790127,
-          "misMatchPercentage": "2.24",
-          "analysisTime": 78
+          "rawMisMatchPercentage": 2.3612397119341564,
+          "misMatchPercentage": "2.36",
+          "analysisTime": 82
         }
       },
       "status": "pass"
