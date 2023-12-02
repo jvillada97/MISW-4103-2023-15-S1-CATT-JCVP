@@ -1,0 +1,11 @@
+{
+    "url": "http://localhost:2368/ghost",
+    "headless": true,
+    "depthLevels": 10,
+    "inputValues": true,
+    "values": {"identification": "Ingrese su correo",
+        "password": "Ingrese su contraseña"},
+    "browsers": ["webkit"],
+    "viewportHeight": 500,
+    "viewportWidth": 500
+}
