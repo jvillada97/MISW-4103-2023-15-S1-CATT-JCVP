@@ -252,7 +252,7 @@ Sigue estos pasos para configurar el entorno de prueba:
 
 1. Descarga este repositorio en tu sistema.
 
-2. Abre una terminal y entra a la raiz del proyecto con cd MISW-4103-2023-15-S1-CATT-JCVP . Dentro de la raiz del proyecto ingresar a la carpeta correspondiente de las pruebas en la versión que quiera ejecutar. Si desea correr las pruebas de la versión 5.68.0 utilice: cd GHOST_5_68_0/playwright_ts/ . Si desea ejecutar la versión 4.44.0 utilice: cd GHOST_4_44_0/playwright_ts/. Si se desean ejecutar las pruebas para las tecnicas de generación de datos se debe usar: cd GHOST_5_68_0/playwright_ts/
+2. Abre una terminal y entra a la raiz del proyecto con cd MISW-4103-2023-15-S1-CATT-JCVP . Dentro de la raiz del proyecto ingresar a la carpeta correspondiente de las pruebas en la versión que quiera ejecutar. Si desea correr las pruebas de la versión 5.68.0 utilice: cd GHOST_5_68_0/playwright_ts/ . Si desea ejecutar la versión 4.44.0 utilice: cd GHOST_4_44_0/playwright_ts/. En el folder GHOST_5_68_0 se encuentran las pruebas con tecnicas de generacion de datos aleatorios mas las demas propuestas a lo largo de las semanas. 
 
 3. Ejecuta el siguiente comando para instalar Playwright: npm install playwright, esto debe hacerse en los directorios de ambas versiones.
 
@@ -273,7 +273,13 @@ Para ejecutar las pruebas, sigue estos pasos:
 ## Observaciones
 
 Es importante que en caso de que ghost no reconozca el usuario, se debe cambiar por un email valido creado anteriormente en ghost en la sentencia: await page.locator('[id="identification"]').fill('CORREO_VALIDO_AQUI');
-y tambien la correspondiente contraseña en la siguiente sentencia: await page.locator('[id="password"]').fill('PASSWORD_AQUI');. Se recomienda hacer este cambio con la ayuda del editor de codigo VS code en todos los archivos dentro del folder "test"
+y tambien la correspondiente contraseña en la siguiente sentencia: await page.locator('[id="password"]').fill('PASSWORD_AQUI');. Este cambio debe hacerse para los archivos 01_*.spec.ts, 02_*.spec.ts, 03_*.spec.ts, 05_*.spec.ts ... 08_*.spec.ts. 
+
+Para el caso del archivo 04_*.spec.ts en los tests con nombres: 'Login process with wrong email' y 'Login process with correct email and wrong password' encontrara dentro de cada uno, una linea donde le pedira agregar el correo o su contraseña de la cuenta de ghost para esta versión.
+
+Para el caso de los archivos 06_* .... 08_* se debe modificar la variable "ghostSlug" con el valor correspondiente del perfil en donde se esten corriendo las pruebas. Este valor se encuentra en la configuracion del perfil del administrador en el campo "Slug"
+
+Se recomienda hacer estos cambio con la ayuda del editor de codigo VS code en los archivos mencionados dentro del folder "test"
 
 # Pruebas de regresión visual RESEMBLEJS
 
@@ -353,44 +359,4 @@ Asegúrate de tener instaladas las siguientes herramientas:
 ## Observaciones
 
 Los reportes html generados para cada una de los escenarios de prueba se encontraran en la ruta './backstop_data/' teniendo en cuenta que estamos en la carpeta Backstop del repositorio.
- 
-# Pruebas automatizadas con Playwright
 
-## Requisitos
-
-Asegúrate de tener instaladas las siguientes herramientas:
-
-- [Ghost](https://github.com/TryGhost/Ghost) v5.68.0
-- [Node.js](https://nodejs.org/) >= v18.17.0
-- [NPM](https://www.npmjs.com/) >= v10.2.0
-
-## Instalación
-
-Sigue estos pasos para configurar el entorno de prueba:
-
-1. Descarga este repositorio en tu sistema.
-
-2. Abre una terminal y entra a la raiz del proyecto con cd MISW-4103-2023-15-S1-CATT-JCVP . Dentro de la raiz del proyecto ingresar a la carpeta utilice: cd GHOST_5_68_0/playwright_ts/ . 
-
-3. Ejecuta el siguiente comando para instalar Playwright: npm install playwright .
-
-4. En el mismo folder ejecutar el siguiente comando para descargar faker: npm install @faker-js/faker .
-
-5. Ejecuta el siguiente comando para instalar la dependencia 'node-fetch', esta es necesaria para hacer las solicitudes HTTP a la API de mockaroo: npm install node-fetch .
-
-## Ejecución de pruebas
-
-Para ejecutar las pruebas, sigue estos pasos:
-
-1. Asegurate que esta corriendo correctamente el aplicativo GHOST localmente en el puerto 2368.
-
-2. Dentro de la raiz del proyecto ingresar a la carpeta con: cd GHOST_5_68_0/playwright_ts/ .
-
-3. Ejecuta el comando: npx playwright test. Este comando ejecutara todas los tests que se encuentran en los archivos dentro del folder "test" dentro de cada una de las carpetas de las versiones.
-
-## Observaciones
-
-Es importante que en caso de que ghost no reconozca el usuario, se debe cambiar por un email valido creado anteriormente en ghost en la sentencia: await page.locator('[id="identification"]').fill('CORREO_VALIDO_AQUI');
-y tambien la correspondiente contraseña en la siguiente sentencia: await page.locator('[id="password"]').fill('PASSWORD_AQUI');. Este cambio debe hacerse para los archivos 01_*.spec.ts, 02_*.spec.ts, 03_*.spec.ts y 05_*.spec.ts. 
-
-Para el caso del archivo 04_*.spec.ts en los tests con nombres: 'Login process with wrong email' y 'Login process with correct email and wrong password' encontrara dentro de cada uno, una linea donde le pedira agregar el correo o su contraseña de la cuenta de ghost para esta versión.
